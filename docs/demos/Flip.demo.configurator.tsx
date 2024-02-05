@@ -1,3 +1,4 @@
+import { Flip } from '@gfazioli/mantine-flip';
 import {
   Badge,
   Button,
@@ -12,7 +13,6 @@ import {
   Title,
 } from '@mantine/core';
 import { MantineDemo } from '@mantinex/demo';
-import { Flip } from 'mantine-extension-template';
 
 function Wrapper(props: any) {
   return (

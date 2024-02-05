@@ -29,7 +29,10 @@
     "./styles.css": "./dist/styles.css",
     "./styles.layer.css": "./dist/styles.layer.css"
   },
-  "repository": "https://github.com/gfazioli/mantine-flip.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gfazioli/mantine-flip.git"
+  },
   "workspaces": [
     "docs"
   ],

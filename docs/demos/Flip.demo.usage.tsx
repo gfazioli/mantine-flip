@@ -1,6 +1,6 @@
+import { Flip } from "@gfazioli/mantine-flip";
 import { Button, Paper } from '@mantine/core';
 import { MantineDemo } from '@mantinex/demo';
-import { Flip } from 'mantine-extension-template';
 
 const code = `
 import { Flip } from '@gfazioli/mantine-flip';
