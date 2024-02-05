@@ -1,4 +1,4 @@
-import type { FlipFactory } from 'mantine-extension-template';
+import type { FlipFactory } from '@gfazioli/mantine-flip';
 import type { StylesApiData } from '../components/styles-api.types';
 
 export const FlipStylesApi: StylesApiData<FlipFactory> = {

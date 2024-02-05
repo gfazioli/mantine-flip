@@ -2136,6 +2136,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@gfazioli/mantine-flip@workspace:*, @gfazioli/mantine-flip@workspace:package":
+  version: 0.0.0-use.local
+  resolution: "@gfazioli/mantine-flip@workspace:package"
+  peerDependencies:
+    "@mantine/core": ">=7.0.0"
+    "@mantine/hooks": ">=7.0.0"
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  languageName: unknown
+  linkType: soft
+
 "@humanwhocodes/config-array@npm:^0.11.13":
   version: 0.11.13
   resolution: "@humanwhocodes/config-array@npm:0.11.13"
@@ -12121,21 +12132,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mantine-extension-template@workspace:*, mantine-extension-template@workspace:package":
-  version: 0.0.0-use.local
-  resolution: "mantine-extension-template@workspace:package"
-  peerDependencies:
-    "@mantine/core": ">=7.0.0"
-    "@mantine/hooks": ">=7.0.0"
-    react: ^18.2.0
-    react-dom: ^18.2.0
-  languageName: unknown
-  linkType: soft
-
 "mantine-minimal-next-template@workspace:docs":
   version: 0.0.0-use.local
   resolution: "mantine-minimal-next-template@workspace:docs"
   dependencies:
+    "@gfazioli/mantine-flip": "workspace:*"
     "@mantine/core": "npm:7.5.1"
     "@mantine/hooks": "npm:7.5.1"
     "@mantinex/demo": "npm:^1.1.0"
@@ -12152,7 +12153,6 @@ __metadata:
     "@types/node": "npm:^20.8.9"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
-    mantine-extension-template: "workspace:*"
     next: "npm:13.4.4"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
