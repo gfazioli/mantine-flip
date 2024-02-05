@@ -8,12 +8,14 @@ export function Usage() {
   return (
     <div style={{ padding: 40 }}>
       <Flip w={200} h={200}>
-        <div>First
+        <div>
+          First
           <Flip.Target>
             <Button>Flip</Button>
           </Flip.Target>
         </div>
-        <div>Second
+        <div>
+          Second
           <Flip.Target>
             <Button>Back</Button>
           </Flip.Target>

@@ -30,22 +30,21 @@ function Demo() {
 
 function Demo() {
   return (
-      <Flip h={200} w={200}>
-        <Paper radius="md" withBorder p="lg" shadow="md">
-          <h3>Front Card</h3>
-          <Flip.Target>
-            <Button>Flip Back</Button>
-          </Flip.Target>
-        </Paper>
+    <Flip h={200} w={200}>
+      <Paper radius="md" withBorder p="lg" shadow="md">
+        <h3>Front Card</h3>
+        <Flip.Target>
+          <Button>Flip Back</Button>
+        </Flip.Target>
+      </Paper>
 
-        <Paper radius="md" withBorder p="lg" shadow="md">
-          <h3>Back Card</h3>
-          <Flip.Target>
-            <Button>Flip Front</Button>
-          </Flip.Target>
-        </Paper>
-
-      </Flip>
+      <Paper radius="md" withBorder p="lg" shadow="md">
+        <h3>Back Card</h3>
+        <Flip.Target>
+          <Button>Flip Front</Button>
+        </Flip.Target>
+      </Paper>
+    </Flip>
   );
 }
 

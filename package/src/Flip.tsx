@@ -17,7 +17,7 @@ import { FlipTarget } from './FlipTarget/FlipTarget';
 export type FlipStylesNames = 'root' | 'flip-inner' | 'flip-content';
 
 export type FlipCssVariables = {
-  root: '--flip-perspective' | '--flip-transition-duration' | '--flip-transition-timing-function'
+  root: '--flip-perspective' | '--flip-transition-duration' | '--flip-transition-timing-function';
 };
 
 export type FlipDirection = 'horizontal' | 'vertical';
@@ -27,7 +27,6 @@ export type FlipIn = 'positive' | 'negative';
 export type FlipOut = FlipIn;
 
 export interface FlipBaseProps {
-
   /** Perspective value for flip animation. Default `1000px` */
   perspective?: string;
 
@@ -53,19 +52,18 @@ export interface FlipBaseProps {
   directionFlipOut?: FlipOut;
 
   /** Called when flip flipped state changes */
-  onChange?:(flipped: boolean) => void;
+  onChange?: (flipped: boolean) => void;
 
   /** Called when Flip is shown back side */
-  onBack?: ()=> void;
+  onBack?: () => void;
 
   /** Called when Flip is shown front side */
-  onFront?: ()=> void;
+  onFront?: () => void;
 
   children?: React.ReactNode;
-
 }
 
-export interface FlipProps extends BoxProps, FlipBaseProps, StylesApiProps<FlipFactory> { }
+export interface FlipProps extends BoxProps, FlipBaseProps, StylesApiProps<FlipFactory> {}
 
 export type FlipFactory = PolymorphicFactory<{
   props: FlipProps;
@@ -75,7 +73,7 @@ export type FlipFactory = PolymorphicFactory<{
   vars: FlipCssVariables;
   staticComponents: {
     Target: typeof FlipTarget;
-  }
+  };
 }>;
 
 const defaultProps: Partial<FlipProps> = {
@@ -146,19 +144,19 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
 
   useDidUpdate(() => {
     if (directionFlipIn === 'negative' && directionFlipOut === 'positive') {
-      setRotateValue(v => v ? v + 180 : -180);
+      setRotateValue((v) => (v ? v + 180 : -180));
     }
 
     if (directionFlipIn === 'negative' && directionFlipOut === 'negative') {
-      setRotateValue(v => v - 180);
+      setRotateValue((v) => v - 180);
     }
 
     if (directionFlipIn === 'positive' && directionFlipOut === 'negative') {
-      setRotateValue(v => v ? v - 180 : 180);
+      setRotateValue((v) => (v ? v - 180 : 180));
     }
 
     if (directionFlipIn === 'positive' && directionFlipOut === 'positive') {
-      setRotateValue(v => v + 180);
+      setRotateValue((v) => v + 180);
     }
   }, [_flipped]);
 
@@ -199,25 +197,19 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
   const toggleFlip = () => (_flipped ? front() : back());
 
   return (
-    <FlipContextProvider value={{
-      toggleFlip,
-      flipped: _flipped,
-    }}>
-      <Box
-        ref={ref}
-        {...getStyles('root')}
-        {...others}>
-        <div
-          ref={containerRef}
-          {...getStyles('flip-inner')}
-          style={getDirectionIn()}>
-          <div
-            {...getStyles('flip-content')}
-            style={{ zIndex: 0 }}>{frontChild}
+    <FlipContextProvider
+      value={{
+        toggleFlip,
+        flipped: _flipped,
+      }}
+    >
+      <Box ref={ref} {...getStyles('root')} {...others}>
+        <div ref={containerRef} {...getStyles('flip-inner')} style={getDirectionIn()}>
+          <div {...getStyles('flip-content')} style={{ zIndex: 0 }}>
+            {frontChild}
           </div>
-          <div
-            {...getStyles('flip-content')}
-            style={getBackRotation()}>{backChild}
+          <div {...getStyles('flip-content')} style={getBackRotation()}>
+            {backChild}
           </div>
         </div>
       </Box>

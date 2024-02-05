@@ -1,4 +1,16 @@
-import { Badge, Button, Card, Center, Group, Image, Paper, Stack, Switch, Text, Title } from '@mantine/core';
+import {
+  Badge,
+  Button,
+  Card,
+  Center,
+  Group,
+  Image,
+  Paper,
+  Stack,
+  Switch,
+  Text,
+  Title,
+} from '@mantine/core';
 import { MantineDemo } from '@mantinex/demo';
 import { Flip } from 'mantine-extension-template';
 
@@ -38,7 +50,9 @@ function Wrapper(props: any) {
 
         <Paper bg="dark" radius="md" withBorder p="lg">
           <Stack>
-            <Title order={4} c="white">Edit Widget</Title>
+            <Title order={4} c="white">
+              Edit Widget
+            </Title>
             <Text c="gray" size="sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
             </Text>
@@ -165,6 +179,14 @@ export const configurator: MantineDemo = {
       libraryValue: 'ease-in-out',
     },
     { prop: 'perspective', type: 'string', initialValue: '1000px', libraryValue: '1000px' },
-    { prop: 'duration', type: 'number', initialValue: 0.8, libraryValue: 0.8, step: 0.1, min: 0, max: 10 },
+    {
+      prop: 'duration',
+      type: 'number',
+      initialValue: 0.8,
+      libraryValue: 0.8,
+      step: 0.1,
+      min: 0,
+      max: 10,
+    },
   ],
 };

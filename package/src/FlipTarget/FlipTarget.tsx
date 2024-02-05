@@ -18,15 +18,14 @@ export const FlipTarget = forwardRef<HTMLDivElement, FlipTargetProps>((props, re
   const { children, refProp, ...others } = useProps('MenuTarget', defaultProps, props);
 
   if (!isElement(children)) {
-    throw new Error('Flip.Target component children should be an element or a component that accepts ref. Fragments, strings, numbers and other primitive values are not supported');
+    throw new Error(
+      'Flip.Target component children should be an element or a component that accepts ref. Fragments, strings, numbers and other primitive values are not supported'
+    );
   }
 
   const ctx = useFlipContext();
 
-  const onClick = createEventHandler(
-    children.props.onClick,
-    () => ctx.toggleFlip()
-  );
+  const onClick = createEventHandler(children.props.onClick, () => ctx.toggleFlip());
 
   return (
     <div ref={ref} {...others}>
