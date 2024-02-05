@@ -1,11 +1,10 @@
-import React from 'react';
-import { Shell } from '../components/Shell';
-import { PageHeader } from '../components/PageHeader';
 import { DocsTabs } from '../components/DocsTabs';
+import { PageHeader } from '../components/PageHeader';
+import { Shell } from '../components/Shell';
 import { PACKAGE_DATA } from '../data';
-import { STYLES_API_DATA } from '../styles-api';
 import docgen from '../docgen.json';
 import Docs from '../docs.mdx';
+import { STYLES_API_DATA } from '../styles-api';
 
 export default function HomePage() {
   return (
@@ -13,8 +12,8 @@ export default function HomePage() {
       <PageHeader data={PACKAGE_DATA} />
       <DocsTabs
         docgen={docgen}
-        componentsProps={['TestComponent']}
-        componentsStyles={['TestComponent']}
+        componentsProps={['Flip']}
+        componentsStyles={['Flip']}
         stylesApiData={STYLES_API_DATA}
       >
         <Docs />

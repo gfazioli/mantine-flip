@@ -1,7 +1,3 @@
-export { TestComponent } from './TestComponent';
-export type {
-  TestComponentProps,
-  TestComponentCssVariables,
-  TestComponentFactory,
-  TestComponentStylesNames,
-} from './TestComponent';
+export { Flip } from './Flip';
+export type { FlipBaseProps, FlipCssVariables, FlipDirection, FlipFactory, FlipIn, FlipOut } from './Flip';
+

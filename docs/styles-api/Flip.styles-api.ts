@@ -1,7 +1,7 @@
-import type { TestComponentFactory } from 'mantine-extension-template';
+import type { FlipFactory } from 'mantine-extension-template';
 import type { StylesApiData } from '../components/styles-api.types';
 
-export const TestComponentStylesApi: StylesApiData<TestComponentFactory> = {
+export const FlipStylesApi: StylesApiData<FlipFactory> = {
   selectors: {
     root: 'Root element',
   },

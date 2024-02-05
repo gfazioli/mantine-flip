@@ -1,14 +1,16 @@
 {
-  "name": "mantine-extension-template",
-  "version": "0.1.3",
-  "description": "A template for Mantine extensions",
-  "homepage": "https://github.com/rtivital/mantine-extension-template#readme",
+  "name": "mantine-flip",
+  "version": "1.0.0",
+  "description": "A Mantine component to wrap any component that can be flipped",
+  "homepage": "https://github.com/gfazioli/mantine-flip#readme",
   "packageManager": "yarn@4.0.1",
   "license": "MIT",
-  "author": "Vitaly Rtishchev <rtivital@gmail.com>",
+  "author": "Giovambattista Fazioli <giovambattista.fazioli@gmail.com>",
   "keywords": [
     "extension",
-    "mantine"
+    "mantine",
+    "flip",
+    "widget"
   ],
   "main": "./dist/cjs/index.cjs",
   "module": "./dist/esm/index.mjs",
@@ -27,7 +29,7 @@
     "./styles.css": "./dist/styles.css",
     "./styles.layer.css": "./dist/styles.layer.css"
   },
-  "repository": "https://github.com/mantinedev/mantine-extension-template.git",
+  "repository": "https://github.com/gfazioli/mantine-flip.git",
   "workspaces": [
     "docs"
   ],
@@ -37,5 +39,5 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "bugs": "https://github.com/rtivital/mantine-extension-template/issues"
+  "bugs": "https://github.com/gfazioli/mantine-flip/issues"
 }

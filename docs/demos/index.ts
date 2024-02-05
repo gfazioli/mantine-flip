@@ -1,2 +1,3 @@
-export { usage } from './TestComponent.demo.usage';
-export { configurator } from './TestComponent.demo.configurator';
+export { configurator } from './Flip.demo.configurator';
+export { usage } from './Flip.demo.usage';
+

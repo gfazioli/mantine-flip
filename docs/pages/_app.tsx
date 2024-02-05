@@ -1,16 +1,15 @@
-import '@mantine/core/styles.css';
-import '@mantinex/shiki/styles.css';
-import '@mantinex/mantine-logo/styles.css';
-import '@mantinex/mantine-header/styles.css';
-import '@mantinex/demo/styles.css';
-import 'mantine-extension-template/styles.css';
-import React from 'react';
-import Head from 'next/head';
-import { AppProps } from 'next/app';
 import { MantineProvider } from '@mantine/core';
+import '@mantine/core/styles.css';
+import '@mantinex/demo/styles.css';
+import '@mantinex/mantine-header/styles.css';
+import '@mantinex/mantine-logo/styles.css';
 import { ShikiProvider } from '@mantinex/shiki';
-import { theme } from '../theme';
+import '@mantinex/shiki/styles.css';
+import 'mantine-extension-template/styles.css';
+import { AppProps } from 'next/app';
+import Head from 'next/head';
 import favicon from '../assets/favicon.svg';
+import { theme } from '../theme';
 
 async function loadShiki() {
   const { getHighlighter } = await import('shikiji');
@@ -25,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <MantineProvider theme={theme}>
       <Head>
-        <title>Mantine Template</title>
+        <title>Mantine Flip</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"

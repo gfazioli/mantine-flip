@@ -25,15 +25,15 @@ export interface PackageData {
 }
 
 export const PACKAGE_DATA: PackageData = {
-  packageName: 'mantine-extension-template',
+  packageName: '@gfazioli/mantine-flip',
   packageDescription:
-    'A template for mantine extensions, includes full setup for package development and documentation',
+    'A Mantine component that flips the content of the component when hovered over.',
   mdxFileUrl:
-    'https://github.com/rtivital/mantine-extension-template/blob/master/docs/pages/index.mdx',
-  repositoryUrl: 'https://github.com/rtivital/mantine-extension-template',
-  licenseUrl: 'https://github.com/rtivital/mantine-extension-template/blob/master/LICENSE',
+    'https://github.com/gfazioli/mantine-flip/blob/master/docs/pages/index.mdx',
+  repositoryUrl: 'https://github.com/gfazioli/mantine-flip',
+  licenseUrl: 'https://github.com/gfazioli/mantine-flip/blob/master/LICENSE',
   author: {
-    name: 'Vitaly Rtishchev',
-    githubUsername: 'rtivital',
+    name: 'Giovambattista Fazioli',
+    githubUsername: 'gfazioli',
   },
 };
