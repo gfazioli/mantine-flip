@@ -5,5 +5,7 @@ export type {
   FlipDirection,
   FlipFactory,
   FlipIn,
-  FlipOut,
+  FlipOut
 } from './Flip';
+export { useFlipContext } from './Flip.context';
+

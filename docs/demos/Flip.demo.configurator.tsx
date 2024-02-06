@@ -58,9 +58,9 @@ function Wrapper(props: any) {
             </Text>
             <Switch c="white" defaultChecked label="Display image" />
             <Switch c="white" label="Auto play" />
-            <Group justify="right">
+            <Group justify="left">
               <Flip.Target>
-                <Button>Close</Button>
+                <Button color="red" mt="md" radius="md">Close</Button>
               </Flip.Target>
             </Group>
           </Stack>
@@ -75,57 +75,57 @@ import { Flip } from '@gfazioli/mantine-flip'';
 
 function Demo() {
   return (
-    <Flip h={200} w={400} {{props}}>
-      <Card shadow="sm" padding="lg" radius="md" withBorder>
-        <Card.Section>
-          <Image
-            src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
-            height={160}
-            alt="Norway"
-          />
-        </Card.Section>
+    <Center>
+      <Flip h={200} w={400} {...props}>
+        <Card shadow="sm" padding="lg" radius="md" withBorder>
+          <Card.Section>
+            <Image
+              src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
+              height={160}
+              alt="Norway"
+            />
+          </Card.Section>
 
-        <Group justify="space-between" mt="md" mb="xs">
-          <Text fw={500}>Norway Fjord Adventures</Text>
-          <Badge color="pink" variant="light">
-            On Sale
-          </Badge>
-        </Group>
+          <Group justify="space-between" mt="md" mb="xs">
+            <Text fw={500}>Norway Fjord Adventures</Text>
+            <Badge color="pink" variant="light">
+              On Sale
+            </Badge>
+          </Group>
 
-        <Text size="sm" c="dimmed">
-          With Fjord Tours you can explore more of the magical fjord landscapes with tours and
-          activities on and around the fjords of Norway
-        </Text>
-
-        <Group justify='right'>
-          <Flip.Target>
-            <Button color="blue" mt="md" radius="md">
-              Edit Widget
-            </Button>
-          </Flip.Target>
-        </Group>
-      </Card>
-
-      <Paper bg="dark" radius="md" withBorder p="lg">
-        <Stack>
-          <Title order={4} c="white">Edit Widget</Title>
-          <Text c="gray" size="sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+          <Text size="sm" c="dimmed">
+            With Fjord Tours you can explore more of the magical fjord landscapes with tours and
+            activities on and around the fjords of Norway
           </Text>
-          <Switch
-              c="white"
-              defaultChecked
-              label="Display image"
-          />
-          <Switch c="white" label="Auto play" />
-          <Group justify='right'>
+
+          <Group justify="right">
             <Flip.Target>
-              <Button>Close</Button>
+              <Button color="blue" mt="md" radius="md">
+                Edit Widget
+              </Button>
             </Flip.Target>
           </Group>
-        </Stack>
-      </Paper>
-    </Flip>
+        </Card>
+
+        <Paper bg="dark" radius="md" withBorder p="lg">
+          <Stack>
+            <Title order={4} c="white">
+              Edit Widget
+            </Title>
+            <Text c="gray" size="sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+            </Text>
+            <Switch c="white" defaultChecked label="Display image" />
+            <Switch c="white" label="Auto play" />
+            <Group justify="left">
+              <Flip.Target>
+                <Button color="red" mt="md" radius="md">Close</Button>
+              </Flip.Target>
+            </Group>
+          </Stack>
+        </Paper>
+      </Flip>
+    </Center>
   );
 }
 `;

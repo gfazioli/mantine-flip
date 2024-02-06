@@ -1,9 +1,10 @@
-import React from 'react';
-import cx from 'clsx';
-import type { MDXComponents } from 'mdx/types';
-import { Image, Code, Title, Anchor } from '@mantine/core';
+import { Anchor, Code, Image, Title } from '@mantine/core';
 import { Demo } from '@mantinex/demo';
 import { CodeHighlight } from '@mantinex/shiki';
+import cx from 'clsx';
+import type { MDXComponents } from 'mdx/types';
+import React from 'react';
+import { MdxInfo } from '../MdxInfo/MdxInfo';
 import classes from './MdxElements.module.css';
 
 export function MdxTitle({
@@ -70,6 +71,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     li: MdxLi,
     p: MdxParagraph,
     a: MdxLink,
+    blockquote: MdxInfo,
     code: Code as any,
     h1: h(1),
     h2: h(2),

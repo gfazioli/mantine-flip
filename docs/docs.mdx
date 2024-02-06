@@ -3,16 +3,32 @@ import * as demos from './demos';
 
 ## Installation
 
-<InstallScript packages="mantine-flip" />
+<InstallScript packages="@gfazioli/mantine-flip" />
 
-## Regular demo
-
-<Demo data={demos.usage} />
-
-## Configurator demo
+## Usage
 
 <Demo data={demos.configurator} />
 
-## Other subtitle
+## Uncontrollded
 
-Other content
+<Demo data={demos.uncontrolled} />
+
+## Controllded
+
+You may control the state of the card by setting the `flipped` prop to `true` or `false`.
+This is useful when you want to control the state of the card from the parent component.
+
+<Demo data={demos.controlled} />
+
+> **Inital face and Flip.Target**
+>
+> For controlled Flip components, you will use `useState` to determine which side of the component to initially show.
+> Additionally, you will not need to use `Flip.Target` for buttons, but you can control them manually to keep the states synchronized.
+
+
+## Default Flipped (face)
+
+You may display the initial face of the card by setting the `defaultFlipped` prop to `true`.
+
+<Demo data={demos.defaultFlipped} />
+
