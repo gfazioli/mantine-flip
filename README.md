@@ -1,5 +1,7 @@
 # Mantine Flip Component
 
+![Flip Component](https://github.com/gfazioli/mantine-flip/blob/master/mantine-flip.mp4)
+
 This component is created on top of the [Mantine](https://mantine.dev/) library.
 It allows for easy management of two separate views, such as in the cases of a registration form and a login form.
 Essentially, when switching between views, the component will handle the flip animation.
@@ -24,21 +26,21 @@ function Demo() {
   return (
     <Flip h={200} w={200}>
 
-    <Paper radius="md" withBorder p="lg" shadow="md">
-      <h3>Front Card</h3>
-      <Flip.Target>
-        <Button>Flip Back</Button>
-      </Flip.Target>
-    </Paper>
+        <Paper radius="md" withBorder p="lg" shadow="md">
+          <h3>Front Card</h3>
+          <Flip.Target>
+            <Button>Flip Back</Button>
+          </Flip.Target>
+        </Paper>
 
-    <Paper radius="md" withBorder p="lg" shadow="md">
-      <h3>Back Card</h3>
-      <Flip.Target>
-        <Button>Flip Front</Button>
-      </Flip.Target>
-    </Paper>
+        <Paper radius="md" withBorder p="lg" shadow="md">
+          <h3>Back Card</h3>
+          <Flip.Target>
+            <Button>Flip Front</Button>
+          </Flip.Target>
+        </Paper>
 
-  </Flip>
+    </Flip>
   );
 }
 ```
