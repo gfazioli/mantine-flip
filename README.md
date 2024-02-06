@@ -1,6 +1,6 @@
 # Mantine Flip Component
 
-![Flip Component](https://github.com/gfazioli/mantine-flip/blob/master/mantine-flip.mp4)
+https://github.com/gfazioli/mantine-flip/assets/432181/67dce395-4a33-42c9-a71d-8fea81712463
 
 This component is created on top of the [Mantine](https://mantine.dev/) library.
 It allows for easy management of two separate views, such as in the cases of a registration form and a login form.
