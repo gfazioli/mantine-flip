@@ -60,7 +60,9 @@ function Wrapper(props: any) {
             <Switch c="white" label="Auto play" />
             <Group justify="left">
               <Flip.Target>
-                <Button color="red" mt="md" radius="md">Close</Button>
+                <Button color="red" mt="md" radius="md">
+                  Close
+                </Button>
               </Flip.Target>
             </Group>
           </Stack>

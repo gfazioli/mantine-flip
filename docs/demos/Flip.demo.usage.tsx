@@ -1,4 +1,4 @@
-import { Flip, useFlipContext } from "@gfazioli/mantine-flip";
+import { Flip, useFlipContext } from '@gfazioli/mantine-flip';
 import { Button, Paper } from '@mantine/core';
 import { MantineDemo } from '@mantinex/demo';
 
@@ -29,8 +29,6 @@ function Demo() {
 `;
 
 function Demo() {
-
-
   function CustomToggleButton() {
     const { toggleFlip } = useFlipContext();
 
@@ -49,9 +47,7 @@ function Demo() {
         <Paper radius="md" withBorder p="lg" shadow="md">
           <h3>Back Card</h3>
         </Paper>
-      
       </Flip>
-
     </Paper>
   );
 }

@@ -1,14 +1,14 @@
-import path from 'node:path';
 import chalk from 'chalk';
-import fs from 'fs-extra';
-import yargs from 'yargs';
-import open from 'open';
-import githubRelease from 'new-github-release-url';
-import SimpleGit from 'simple-git';
-import { hideBin } from 'yargs/helpers';
 import { execa } from 'execa';
+import fs from 'fs-extra';
+import githubRelease from 'new-github-release-url';
+import path from 'node:path';
+import open from 'open';
 import signale from 'signale';
-import { getNextVersion, VersionStage, VersionIncrement } from 'version-next';
+import SimpleGit from 'simple-git';
+import { VersionIncrement, VersionStage, getNextVersion } from 'version-next';
+import yargs from 'yargs';
+import { hideBin } from 'yargs/helpers';
 import { run } from './run';
 import { updateVersion } from './update-version';
 
@@ -107,7 +107,7 @@ async function release() {
 
   open(
     githubRelease({
-      ...getRepositoryInfo(packageJson.repository.url),
+      ...getRepositoryInfo(packageJson.repository),
       tag: nextVersion,
       title: nextVersion,
     })

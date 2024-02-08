@@ -1,4 +1,4 @@
-import { Flip } from "@gfazioli/mantine-flip";
+import { Flip } from '@gfazioli/mantine-flip';
 import { Button, Group, Paper } from '@mantine/core';
 import { MantineDemo } from '@mantinex/demo';
 
@@ -31,24 +31,22 @@ function Demo() {
 function Demo() {
   return (
     <Flip h={200} w={400} defaultFlipped={true}>
-
       <Paper radius="md" withBorder p="lg" shadow="md">
         <h3>Front Card</h3>
-            <p>The front card</p>
-            <Group justify="right">
-              <Flip.Target>
-                  <Button>Show Back</Button>
-              </Flip.Target>
-            </Group>
+        <p>The front card</p>
+        <Group justify="right">
+          <Flip.Target>
+            <Button>Show Back</Button>
+          </Flip.Target>
+        </Group>
       </Paper>
 
       <Paper radius="md" withBorder p="lg" shadow="md">
         <h3>Back Card</h3>
-          <Flip.Target>
-            <Button variant="outline">Back to Front</Button>
-          </Flip.Target>
+        <Flip.Target>
+          <Button variant="outline">Back to Front</Button>
+        </Flip.Target>
       </Paper>
-
     </Flip>
   );
 }
