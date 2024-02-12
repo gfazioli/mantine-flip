@@ -2,7 +2,7 @@
   "name": "@gfazioli/mantine-flip",
   "version": "1.0.12",
   "description": "Flip component is a wrapper for any component that can be flipped. It is used to create cards, flip boxes and more.",
-  "homepage": "https://github.com/gfazioli/mantine-flip#readme",
+  "homepage": "https://gfazioli.github.io/mantine-flip/",
   "packageManager": "yarn@4.0.1",
   "license": "MIT",
   "author": "Giovambattista Fazioli <giovambattista.fazioli@gmail.com>",
