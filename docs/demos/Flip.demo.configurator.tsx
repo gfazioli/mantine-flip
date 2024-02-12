@@ -78,7 +78,7 @@ import { Flip } from '@gfazioli/mantine-flip'';
 function Demo() {
   return (
     <Center>
-      <Flip h={200} w={400} {...props}>
+      <Flip h={200} w={400}{{props}}>
         <Card shadow="sm" padding="lg" radius="md" withBorder>
           <Card.Section>
             <Image
