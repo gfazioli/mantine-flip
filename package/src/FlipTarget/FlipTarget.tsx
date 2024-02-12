@@ -37,4 +37,4 @@ export const FlipTarget = forwardRef<HTMLDivElement, FlipTargetProps>((props, re
   );
 });
 
-FlipTarget.displayName = '@mantine/core/FlipTarget';
+FlipTarget.displayName = 'FlipTarget';

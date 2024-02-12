@@ -218,5 +218,5 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
 });
 
 Flip.classes = classes;
-Flip.displayName = '@mantine/core/Flip';
+Flip.displayName = 'Flip';
 Flip.Target = FlipTarget;
