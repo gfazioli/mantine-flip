@@ -16,5 +16,5 @@ export const FlipStylesApi: StylesApiData<FlipFactory> = {
     },
   },
 
-  modifiers: [{ modifier: 'data-centered', selector: 'root', condition: '`centered` prop is set' }],
+  //modifiers: [{ modifier: 'data-centered', selector: 'root', condition: '`centered` prop is set' }],
 };

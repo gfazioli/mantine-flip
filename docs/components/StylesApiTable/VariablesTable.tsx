@@ -1,5 +1,6 @@
+import { Table, TableProps } from '@mantine/core';
 import React from 'react';
-import { Table, TableProps, Text } from '@mantine/core';
+import { HtmlText } from '../HtmlText';
 import { TableInlineCode } from '../TableInlineCode';
 import type { StylesApiData } from './StylesApiTable';
 
@@ -20,7 +21,7 @@ export function VariablesTable({ data, fixedLayout = true, ...others }: Variable
             <TableInlineCode>{variable}</TableInlineCode>
           </Table.Td>
           <Table.Td>
-            <Text fz="sm">{data.vars[selector][variable]}</Text>
+            <HtmlText fz="sm">{data.vars[selector][variable]}</HtmlText>
           </Table.Td>
         </Table.Tr>
       );
