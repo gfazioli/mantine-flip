@@ -1,5 +1,5 @@
-import React from 'react';
-import { Table, TableProps, Text } from '@mantine/core';
+import { Table, TableProps } from '@mantine/core';
+import { HtmlText } from '../HtmlText';
 import { TableInlineCode } from '../TableInlineCode';
 import type { StylesApiData } from './StylesApiTable';
 
@@ -23,12 +23,12 @@ export function ModifiersTable({ data, fixedLayout = true, ...others }: Modifier
         </Table.Td>
         {hasConditions && (
           <Table.Td>
-            <Text fz="sm">{modifier.condition || '–'}</Text>
+            <HtmlText fz="sm">{modifier.condition || '–'}</HtmlText>
           </Table.Td>
         )}
         {hasValues && (
           <Table.Td>
-            <Text fz="sm">{modifier.value || '–'}</Text>
+            <HtmlText fz="sm">{modifier.value || '–'}</HtmlText>
           </Table.Td>
         )}
       </Table.Tr>
