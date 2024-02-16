@@ -1,10 +1,10 @@
-import React from 'react';
-import { Title, Container, Text } from '@mantine/core';
+import { Badge, Container, Text, Title } from '@mantine/core';
 import { GithubIcon, NpmIcon } from '@mantinex/dev-icons';
-import { IconLicense, IconUserCode, IconEdit } from '@tabler/icons-react';
+import { IconEdit, IconLicense, IconUserCode, IconVersions } from '@tabler/icons-react';
+import pack from '../../../package/package.json';
 import type { PackageData } from '../../data';
-import { PageHeaderLink } from './PageHeaderLink/PageHeaderLink';
 import classes from './PageHeader.module.css';
+import { PageHeaderLink } from './PageHeaderLink/PageHeaderLink';
 
 interface PageHeaderProps {
   data: PackageData;
@@ -18,6 +18,9 @@ export function PageHeader({ data }: PageHeaderProps) {
         <Text className={classes.description}>{data.packageDescription}</Text>
 
         <div className={classes.links}>
+          <PageHeaderLink label="Version" icon={<IconVersions size={18} stroke={1.5} />}>
+            <Badge>v{pack.version}</Badge>
+          </PageHeaderLink>
           <PageHeaderLink label="Source" icon={<GithubIcon size={16} />} link={data.repositoryUrl}>
             View source code
           </PageHeaderLink>
