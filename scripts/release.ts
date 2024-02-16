@@ -13,7 +13,7 @@ import { run } from './run';
 import { updateVersion } from './update-version';
 
 function getRepositoryInfo(gitUrl: string) {
-  const [user, repo] = gitUrl.replace('git+https://github.com/', '').replace('.git', '').split('/');
+  const [user, repo] = gitUrl.replace('https://github.com/', '').replace('.git', '').split('/');
   return { user, repo };
 }
 
@@ -107,7 +107,7 @@ async function release() {
 
   open(
     githubRelease({
-      ...getRepositoryInfo(packageJson.repository),
+      ...getRepositoryInfo(packageJson.repository.url),
       tag: nextVersion,
       title: nextVersion,
     })
