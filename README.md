@@ -36,6 +36,12 @@ or
 yarn add @gfazioli/mantine-flip
 ```
 
+After installation import package styles at the root of your application:
+
+```tsx
+import '@gfazioli/mantine-flip/styles.css';
+```
+
 ## Usage
 
 ```tsx
