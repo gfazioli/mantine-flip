@@ -1,15 +1,19 @@
-import '@gfazioli/mantine-flip/styles.css';
-import { MantineProvider } from '@mantine/core';
 import '@mantine/core/styles.css';
+import '@mantine/dates/styles.css';
 import '@mantinex/demo/styles.css';
 import '@mantinex/mantine-header/styles.css';
 import '@mantinex/mantine-logo/styles.css';
-import { ShikiProvider } from '@mantinex/shiki';
 import '@mantinex/shiki/styles.css';
+
+import { MantineProvider } from '@mantine/core';
+import { ShikiProvider } from '@mantinex/shiki';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import favicon from '../assets/favicon.svg';
 import { theme } from '../theme';
+
+import '@gfazioli/mantine-flip/styles.css';
+import { Footer } from '../components/Footer';
 
 async function loadShiki() {
   const { getHighlighter } = await import('shikiji');
@@ -34,6 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <ShikiProvider loadShiki={loadShiki}>
         <Component {...pageProps} />
       </ShikiProvider>
+      <Footer />
     </MantineProvider>
   );
 }

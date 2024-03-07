@@ -2583,6 +2583,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mantine/dates@npm:^7.6.1":
+  version: 7.6.1
+  resolution: "@mantine/dates@npm:7.6.1"
+  dependencies:
+    clsx: "npm:2.1.0"
+  peerDependencies:
+    "@mantine/core": 7.6.1
+    "@mantine/hooks": 7.6.1
+    dayjs: ">=1.0.0"
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  checksum: cc9613c361527ab7a84b302cb83110126009982195acef3e25f34e2c548e0f9ac057160ece557401f40430afe83c81fb380bec915405e17604588f32e5563d5d
+  languageName: node
+  linkType: hard
+
 "@mantine/hooks@npm:7.5.1":
   version: 7.5.1
   resolution: "@mantine/hooks@npm:7.5.1"
@@ -6726,6 +6741,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clsx@npm:2.1.0":
+  version: 2.1.0
+  resolution: "clsx@npm:2.1.0"
+  checksum: c09c00ad14f638366ca814097e6cab533dfa1972a358da5b557be487168acbb25b4c1395e89ffa842a8a61ba87a462d2b4885bc9d4f8410b598f3cb339599cdb
+  languageName: node
+  linkType: hard
+
 "co@npm:^4.6.0":
   version: 4.6.0
   resolution: "co@npm:4.6.0"
@@ -7251,6 +7273,13 @@ __metadata:
     whatwg-mimetype: "npm:^3.0.0"
     whatwg-url: "npm:^11.0.0"
   checksum: 051c3aaaf3e961904f136aab095fcf6dff4db23a7fc759dd8ba7b3e6ba03fc07ef608086caad8ab910d864bd3b5e57d0d2f544725653d77c96a2c971567045f4
+  languageName: node
+  linkType: hard
+
+"dayjs@npm:^1.11.10":
+  version: 1.11.10
+  resolution: "dayjs@npm:1.11.10"
+  checksum: 4de9af50639d47df87f2e15fa36bb07e0f9ed1e9c52c6caa1482788ee9a384d668f1dbd00c54f82aaab163db07d61d2899384b8254da3a9184fc6deca080e2fe
   languageName: node
   linkType: hard
 
@@ -12138,6 +12167,7 @@ __metadata:
   dependencies:
     "@gfazioli/mantine-flip": "workspace:*"
     "@mantine/core": "npm:7.5.1"
+    "@mantine/dates": "npm:^7.6.1"
     "@mantine/hooks": "npm:7.5.1"
     "@mantinex/demo": "npm:^1.1.0"
     "@mantinex/dev-icons": "npm:^1.0.2"
@@ -12153,6 +12183,7 @@ __metadata:
     "@types/node": "npm:^20.8.9"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
+    dayjs: "npm:^1.11.10"
     next: "npm:13.4.4"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"

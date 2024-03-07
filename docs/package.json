@@ -10,6 +10,7 @@
   "dependencies": {
     "@gfazioli/mantine-flip": "workspace:*",
     "@mantine/core": "7.5.1",
+    "@mantine/dates": "^7.6.1",
     "@mantine/hooks": "7.5.1",
     "@mantinex/demo": "^1.1.0",
     "@mantinex/dev-icons": "^1.0.2",
@@ -22,6 +23,7 @@
     "@next/mdx": "^14.0.0",
     "@tabler/icons-react": "^2.40.0",
     "@types/mdx": "^2.0.9",
+    "dayjs": "^1.11.10",
     "next": "13.4.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
