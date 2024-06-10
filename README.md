@@ -24,6 +24,7 @@
 This component is created on top of the [Mantine](https://mantine.dev/) library.
 It allows for easy management of two separate views, such as in the cases of a registration form and a login form.
 Essentially, when switching between views, the component will handle the flip animation.
+You can find more components on the [Mantine Extensions Hub](https://mantine-extensions.vercel.app/) library.
 
 ## Installation
 
