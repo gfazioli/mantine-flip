@@ -3,6 +3,14 @@
 The following is a list of notable changes to the Mantine Flip component.  
 Minor versions that are not listed in the changelog are bug fixes and small improvements.
 
+## 1.0.18 (2024-09-29)
+
+- 📦️ Updated Mantine 7.13
+
+## 1.0.17 (2024-07-11)
+
+- ✨ support @layer directive
+
 ## 1.0.16 (2024-06-10)
 
 - 📝 Minor fixes on CHANGELOG, CONTRIBUTING and CODE_OF_CONDUCT
