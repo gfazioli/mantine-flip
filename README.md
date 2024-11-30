@@ -4,25 +4,15 @@
   <img alt="" src="https://github.com/gfazioli/mantine-flip/assets/432181/cf1917a3-e7eb-4ecb-a525-85ff933c601d">
 </p>
 
-
-[![Watch the video](https://img.youtube.com/vi/RzRUb3IDcDw/maxresdefault.jpg)](https://youtu.be/RzRUb3IDcDw)
-
-
 ---
 
-<p align="center">
-  <a aria-label="NPM version" href="https://www.npmjs.com/package/@gfazioli/mantine-flip">
-    <img alt="NPM version" src="https://img.shields.io/npm/v/%40gfazioli%2Fmantine-flip?style=for-the-badge">
-  </a>
-  
-  <a aria-label="NPM version" href="https://www.npmjs.com/package/@gfazioli/mantine-flip">
-    <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/%40gfazioli%2Fmantine-flip?style=for-the-badge">
-  </a>
+<div align="center">
 
-  <img alt="NPM License" src="https://img.shields.io/npm/l/%40gfazioli%2Fmantine-flip?style=for-the-badge">
+  [![NPM version](https://img.shields.io/npm/v/%40gfazioli%2Fmantine-flip?style=for-the-badge)](https://www.npmjs.com/package/@gfazioli/mantine-flip)
+  [![NPM Downloads](https://img.shields.io/npm/dm/%40gfazioli%2Fmantine-flip?style=for-the-badge)](https://www.npmjs.com/package/@gfazioli/mantine-flip)
+  ![NPM License](https://img.shields.io/npm/l/%40gfazioli%2Fmantine-flip?style=for-the-badge)
 
-</p>
-
+</div>
 
 ## Overview
 
@@ -30,6 +20,8 @@ This component is created on top of the [Mantine](https://mantine.dev/) library.
 It allows for easy management of two separate views, such as in the cases of a registration form and a login form.
 Essentially, when switching between views, the component will handle the flip animation.
 You can find more components on the [Mantine Extensions Hub](https://mantine-extensions.vercel.app/) library.
+
+📽️ [Watch the Video](https://youtu.be/RzRUb3IDcDw)
 
 ## Installation
 
