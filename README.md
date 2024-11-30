@@ -4,6 +4,10 @@
   <img alt="" src="https://github.com/gfazioli/mantine-flip/assets/432181/cf1917a3-e7eb-4ecb-a525-85ff933c601d">
 </p>
 
+
+[![Watch the video](https://img.youtube.com/vi/RzRUb3IDcDw/maxresdefault.jpg)](https://youtu.be/RzRUb3IDcDw)
+
+
 ---
 
 <p align="center">
