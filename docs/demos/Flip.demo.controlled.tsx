@@ -1,7 +1,7 @@
+import { useState } from 'react';
 import { Flip } from '@gfazioli/mantine-flip';
 import { Button, Group, Paper, Stack, Switch } from '@mantine/core';
 import { MantineDemo } from '@mantinex/demo';
-import { useState } from 'react';
 
 const code = `
 function Demo() {

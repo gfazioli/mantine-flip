@@ -1,17 +1,17 @@
+import { useState } from 'react';
 import { Flip } from '@gfazioli/mantine-flip';
 import {
   Container,
+  getGradient,
   Group,
   Paper,
   Stack,
   TextInput,
   Title,
-  getGradient,
   useMantineTheme,
 } from '@mantine/core';
 import { MonthPickerInput } from '@mantine/dates';
 import { MantineDemo } from '@mantinex/demo';
-import { useState } from 'react';
 
 const code = `
 function Demo() {

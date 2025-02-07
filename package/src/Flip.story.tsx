@@ -1,5 +1,5 @@
-import { Button, Container, Paper } from '@mantine/core';
 import React from 'react';
+import { Button, Container, Paper } from '@mantine/core';
 import { Flip } from './Flip';
 
 export default { title: 'Flip' };

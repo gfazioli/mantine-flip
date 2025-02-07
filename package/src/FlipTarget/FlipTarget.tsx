@@ -1,5 +1,5 @@
-import { createEventHandler, isElement, useProps } from '@mantine/core';
 import React, { cloneElement, forwardRef } from 'react';
+import { createEventHandler, isElement, useProps } from '@mantine/core';
 import { useFlipContext } from '../Flip.context';
 
 export interface FlipTargetProps {
@@ -25,7 +25,9 @@ export const FlipTarget = forwardRef<HTMLDivElement, FlipTargetProps>((props, re
 
   const ctx = useFlipContext();
 
-  const onClick = createEventHandler((children as React.ReactElement<any>).props.onClick, () => ctx.toggleFlip());
+  const onClick = createEventHandler((children as React.ReactElement<any>).props.onClick, () =>
+    ctx.toggleFlip()
+  );
 
   return (
     <div ref={ref} {...others}>

@@ -1,18 +1,18 @@
+import React, { useRef, useState } from 'react';
 import {
   Box,
   BoxProps,
-  PolymorphicFactory,
-  StylesApiProps,
   createVarsResolver,
+  PolymorphicFactory,
   polymorphicFactory,
+  StylesApiProps,
   useProps,
   useStyles,
 } from '@mantine/core';
 import { useDidUpdate, useUncontrolled } from '@mantine/hooks';
-import React, { useRef, useState } from 'react';
 import { FlipContextProvider } from './Flip.context';
-import classes from './Flip.module.css';
 import { FlipTarget } from './FlipTarget/FlipTarget';
+import classes from './Flip.module.css';
 
 export type FlipStylesNames = 'root' | 'flip-inner' | 'flip-content';
 
