@@ -25,11 +25,11 @@ export const FlipTarget = forwardRef<HTMLDivElement, FlipTargetProps>((props, re
 
   const ctx = useFlipContext();
 
-  const onClick = createEventHandler(children.props.onClick, () => ctx.toggleFlip());
+  const onClick = createEventHandler((children as React.ReactElement<any>).props.onClick, () => ctx.toggleFlip());
 
   return (
     <div ref={ref} {...others}>
-      {cloneElement(children, {
+      {cloneElement(children as React.ReactElement<any>, {
         onClick,
         'data-flipped': ctx.flipped ? true : undefined,
       })}
