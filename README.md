@@ -1,8 +1,10 @@
 # Mantine Flip Component
 
-<p align="center">
-  <img alt="" src="https://github.com/gfazioli/mantine-flip/assets/432181/cf1917a3-e7eb-4ecb-a525-85ff933c601d">
-</p>
+<div align="center">
+  
+  ![Mantine Flip Component](https://github.com/gfazioli/mantine-flip/assets/432181/cf1917a3-e7eb-4ecb-a525-85ff933c601d)
+
+</div>
 
 ---
 
@@ -10,6 +12,7 @@
 
   [![NPM version](https://img.shields.io/npm/v/%40gfazioli%2Fmantine-flip?style=for-the-badge)](https://www.npmjs.com/package/@gfazioli/mantine-flip)
   [![NPM Downloads](https://img.shields.io/npm/dm/%40gfazioli%2Fmantine-flip?style=for-the-badge)](https://www.npmjs.com/package/@gfazioli/mantine-flip)
+  [![NPM Downloads](https://img.shields.io/npm/dy/%40gfazioli%2Fmantine-flip?style=for-the-badge&label=%20&color=f90)](https://www.npmjs.com/package/@gfazioli/mantine-flip)
   ![NPM License](https://img.shields.io/npm/l/%40gfazioli%2Fmantine-flip?style=for-the-badge)
 
 </div>

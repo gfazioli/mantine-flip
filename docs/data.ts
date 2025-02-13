@@ -28,7 +28,7 @@ export const PACKAGE_DATA: PackageData = {
   packageName: '@gfazioli/mantine-flip',
   packageDescription:
     'A Mantine component that flips the content of the component when hovered over.',
-  mdxFileUrl: 'https://github.com/gfazioli/mantine-flip/blob/master/docs/pages/index.mdx',
+  mdxFileUrl: 'https://github.com/gfazioli/mantine-flip/blob/master/docs/docs.mdx',
   repositoryUrl: 'https://github.com/gfazioli/mantine-flip',
   licenseUrl: 'https://github.com/gfazioli/mantine-flip/blob/master/LICENSE',
   author: {
