@@ -163,6 +163,7 @@ export const signin: MantineDemo = {
     { fileName: 'Demo.module.css', code: cssCode, language: 'scss' },
   ],
   component: Demo,
+  defaultExpanded: false,
   centered: true,
   maxWidth: 400,
   minHeight: 500,

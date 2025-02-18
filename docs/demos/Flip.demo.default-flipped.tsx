@@ -63,6 +63,7 @@ export const defaultFlipped: MantineDemo = {
   type: 'code',
   code,
   component: Demo,
+  defaultExpanded: false,
   centered: true,
   maxWidth: 400,
   minHeight: 220,

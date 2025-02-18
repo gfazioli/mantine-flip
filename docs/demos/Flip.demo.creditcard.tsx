@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Flip } from '@gfazioli/mantine-flip';
 import {
   Container,
@@ -6,23 +5,29 @@ import {
   Group,
   Paper,
   Stack,
+  Text,
   TextInput,
   Title,
+  useMantineColorScheme,
   useMantineTheme,
 } from '@mantine/core';
 import { MonthPickerInput } from '@mantine/dates';
+import { useDisclosure, useHotkeys } from '@mantine/hooks';
 import { MantineDemo } from '@mantinex/demo';
 
 const code = `
 function Demo() {
-  const [flipped, setFlipped] = useState(false);
+  const [flipped, { toggle, close, open }] = useDisclosure(false);
 
   const theme = useMantineTheme();
+  const { colorScheme } = useMantineColorScheme();
+  useHotkeys([['escape', close]]);
+
 
   function FrontCreditCard() {
     return (
       <Paper
-        onClick={() => setFlipped(true)}
+        onClick={() => open()}
         style={{ cursor: 'pointer' }}
         bg={getGradient({ deg: 180, from: 'blue', to: 'cyan.7' }, theme)}
         w={400}
@@ -52,7 +57,11 @@ function Demo() {
   function BackCreditCard() {
     return (
       <Paper
-        bg={getGradient({ deg: 180, from: 'gray.1', to: 'indigo.1' }, theme)}
+        bg={
+          colorScheme === 'light'
+            ? getGradient({ deg: 180, from: 'gray.1', to: 'indigo.1' }, theme)
+            : getGradient({ deg: 180, from: 'dark.8', to: 'dark.9' }, theme)
+        }
         w={400}
         h={220}
         withBorder
@@ -64,6 +73,13 @@ function Demo() {
         <Stack>
           <TextInput
             label="Number"
+            autoFocus
+            onKeyUp={(event) => {
+              if (event.key === 'Escape') {
+                event.preventDefault();
+                close();
+              }
+            }}
             type="tel"
             pattern="[0-9\s]{13,19}"
             autoComplete="cc-number"
@@ -80,6 +96,11 @@ function Demo() {
               valueFormat="MM/YY"
             />
             <TextInput w={100} label="CVV" placeholder="" required />
+          </Group>
+          <Group justify="right">
+            <Text fs={'italic'} c="dimmed" size="xs">
+              Press ESC to flip back
+            </Text>
           </Group>
         </Stack>
       </Paper>
@@ -98,14 +119,16 @@ function Demo() {
 `;
 
 function Demo() {
-  const [flipped, setFlipped] = useState(false);
+  const [flipped, { toggle, close, open }] = useDisclosure(false);
 
   const theme = useMantineTheme();
+  const { colorScheme } = useMantineColorScheme();
+  useHotkeys([['escape', close]]);
 
   function FrontCreditCard() {
     return (
       <Paper
-        onClick={() => setFlipped(true)}
+        onClick={() => open()}
         style={{ cursor: 'pointer' }}
         bg={getGradient({ deg: 180, from: 'blue', to: 'cyan.7' }, theme)}
         w={400}
@@ -135,7 +158,11 @@ function Demo() {
   function BackCreditCard() {
     return (
       <Paper
-        bg={getGradient({ deg: 180, from: 'gray.1', to: 'indigo.1' }, theme)}
+        bg={
+          colorScheme === 'light'
+            ? getGradient({ deg: 180, from: 'gray.1', to: 'indigo.1' }, theme)
+            : getGradient({ deg: 180, from: 'dark.8', to: 'dark.9' }, theme)
+        }
         w={400}
         h={220}
         withBorder
@@ -147,6 +174,13 @@ function Demo() {
         <Stack>
           <TextInput
             label="Number"
+            autoFocus
+            onKeyUp={(event) => {
+              if (event.key === 'Escape') {
+                event.preventDefault();
+                close();
+              }
+            }}
             type="tel"
             pattern="[0-9\s]{13,19}"
             autoComplete="cc-number"
@@ -163,6 +197,11 @@ function Demo() {
               valueFormat="MM/YY"
             />
             <TextInput w={100} label="CVV" placeholder="" required />
+          </Group>
+          <Group justify="right">
+            <Text fs={'italic'} c="dimmed" size="xs">
+              Press ESC to flip back
+            </Text>
           </Group>
         </Stack>
       </Paper>
@@ -183,6 +222,7 @@ export const creditCard: MantineDemo = {
   type: 'code',
   code: [{ fileName: 'Demo.tsx', code, language: 'tsx' }],
   component: Demo,
+  defaultExpanded: false,
   centered: true,
   maxWidth: 400,
   minHeight: 300,

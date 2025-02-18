@@ -73,6 +73,7 @@ export const controlled: MantineDemo = {
   type: 'code',
   code,
   component: Demo,
+  defaultExpanded: false,
   centered: true,
   maxWidth: 400,
   dimmed: true,

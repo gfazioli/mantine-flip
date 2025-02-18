@@ -56,6 +56,7 @@ export const usage: MantineDemo = {
   type: 'code',
   code,
   component: Demo,
+  defaultExpanded: false,
   centered: true,
   maxWidth: 340,
   dimmed: true,
