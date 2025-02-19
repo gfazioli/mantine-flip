@@ -14,6 +14,7 @@ export default function HomePage() {
         docgen={docgen}
         componentsProps={['Flip']}
         componentsStyles={['Flip']}
+        componentPrefix="Flip"
         stylesApiData={STYLES_API_DATA}
       >
         <Docs />
