@@ -15,7 +15,7 @@ const defaultProps: Partial<FlipTargetProps> = {
 };
 
 export const FlipTarget = forwardRef<HTMLDivElement, FlipTargetProps>((props, ref) => {
-  const { children, refProp, ...others } = useProps('MenuTarget', defaultProps, props);
+  const { children, refProp, ...others } = useProps('FlipTarget', defaultProps, props);
 
   if (!isElement(children)) {
     throw new Error(
