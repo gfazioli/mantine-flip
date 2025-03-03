@@ -33,7 +33,7 @@ Essentially, when switching between views, the component will handle the flip an
 [![Demo and Documentation](https://img.shields.io/badge/-Demo_%26_Documentation-blue?style=for-the-badge&labelColor=black&logo=typescript
 )](https://gfazioli.github.io/mantine-flip/)
 [![Mantine Extensions HUB](https://img.shields.io/badge/-Mantine_Extensions_Hub-blue?style=for-the-badge&labelColor=blue
-)](https://gfazioli.github.io/mantine-onboarding-tour/)
+)](https://mantine-extensions.vercel.app/)
 
 👉 You can find more components on the [Mantine Extensions Hub](https://mantine-extensions.vercel.app/) library.
 
