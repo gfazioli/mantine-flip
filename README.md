@@ -20,11 +20,23 @@
 ## Overview
 
 This component is created on top of the [Mantine](https://mantine.dev/) library.
+
+[![Mantine UI Library](https://img.shields.io/badge/-MANTINE_UI_LIBRARY-blue?style=for-the-badge&labelColor=black&logo=mantine
+)](https://mantine.dev/)
+
 It allows for easy management of two separate views, such as in the cases of a registration form and a login form.
 Essentially, when switching between views, the component will handle the flip animation.
-You can find more components on the [Mantine Extensions Hub](https://mantine-extensions.vercel.app/) library.
 
-📽️ [Watch the Video](https://youtu.be/RzRUb3IDcDw)
+
+[![Video](https://img.shields.io/badge/-Watch_the_Video-blue?style=for-the-badge&labelColor=black&logo=youtube
+)](https://youtu.be/RzRUb3IDcDw)
+[![Demo and Documentation](https://img.shields.io/badge/-Demo_%26_Documentation-blue?style=for-the-badge&labelColor=black&logo=typescript
+)](https://gfazioli.github.io/mantine-flip/)
+[![Mantine Extensions HUB](https://img.shields.io/badge/-Mantine_Extensions_Hub-blue?style=for-the-badge&labelColor=blue
+)](https://gfazioli.github.io/mantine-onboarding-tour/)
+
+👉 You can find more components on the [Mantine Extensions Hub](https://mantine-extensions.vercel.app/) library.
+
 
 ## Installation
 
