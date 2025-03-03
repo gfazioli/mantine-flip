@@ -68,12 +68,10 @@ function Demo() {
         shadow="md"
         p={30}
         radius="md"
-        autoFocus
       >
         <Stack>
           <TextInput
             label="Number"
-            autoFocus
             onKeyUp={(event) => {
               if (event.key === 'Escape') {
                 event.preventDefault();
@@ -169,12 +167,10 @@ function Demo() {
         shadow="md"
         p={30}
         radius="md"
-        autoFocus
       >
         <Stack>
           <TextInput
             label="Number"
-            autoFocus
             onKeyUp={(event) => {
               if (event.key === 'Escape') {
                 event.preventDefault();
