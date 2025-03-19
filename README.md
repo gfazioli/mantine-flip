@@ -1,10 +1,9 @@
 # Mantine Flip Component
 
-<div align="center">
-  
-  ![Mantine Flip Component](https://github.com/gfazioli/mantine-flip/assets/432181/cf1917a3-e7eb-4ecb-a525-85ff933c601d)
 
-</div>
+https://github.com/user-attachments/assets/cc968450-9d8c-4b16-be58-a6766597742e
+
+
 
 ---
 
