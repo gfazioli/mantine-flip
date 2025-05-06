@@ -30,7 +30,7 @@ function Demo() {
 
 function Demo() {
   return (
-    <Flip h={200} w={400} defaultFlipped={true}>
+    <Flip h={200} w={400} defaultFlipped>
       <Paper radius="md" withBorder p="lg" shadow="md">
         <h3>Front Card</h3>
         <p>The front card</p>

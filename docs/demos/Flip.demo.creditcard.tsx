@@ -79,7 +79,7 @@ function Demo() {
               }
             }}
             type="tel"
-            pattern="[0-9\s]{13,19}"
+            pattern="[0-9\\s]{13,19}"
             autoComplete="cc-number"
             maxLength={16}
             placeholder="xxxx xxxx xxxx xxxx"
@@ -117,7 +117,7 @@ function Demo() {
 `;
 
 function Demo() {
-  const [flipped, { toggle, close, open }] = useDisclosure(false);
+  const [flipped, { close, open }] = useDisclosure(false);
 
   const theme = useMantineTheme();
   const { colorScheme } = useMantineColorScheme();
@@ -195,7 +195,7 @@ function Demo() {
             <TextInput w={100} label="CVV" placeholder="" required />
           </Group>
           <Group justify="right">
-            <Text fs={'italic'} c="dimmed" size="xs">
+            <Text fs="italic" c="dimmed" size="xs">
               Press ESC to flip back
             </Text>
           </Group>
