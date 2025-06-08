@@ -1,4 +1,5 @@
 import { Flip } from '@gfazioli/mantine-flip';
+import { IconArrowRight } from '@tabler/icons-react';
 import { Badge, Button, Card, Flex, Image, SimpleGrid, Stack, Text, Title } from '@mantine/core';
 import { MantineDemo } from '@mantinex/demo';
 
@@ -15,7 +16,7 @@ function Demo() {
   return (
     <SimpleGrid cols={3} verticalSpacing="lg">
       {testData.map((item) => (
-        <Flip key={item.title} h={WIDGET_HEIGHT}>
+        <Flip key={item.title} h={WIDGET_HEIGHT} directionFlipIn="positive">
           <Card h={WIDGET_HEIGHT} shadow="sm" radius="md" withBorder>
             <Card.Section>
               <Image h={IMAGE_HEIGHT} src={item.image} alt={item.title} />
@@ -44,7 +45,9 @@ function Demo() {
 
               <Flex justify="right">
                 <Flip.Target>
-                  <Button>Back</Button>
+                  <Button size="xs" rightSection={<IconArrowRight />} variant="outline">
+                    Back
+                  </Button>
                 </Flip.Target>
               </Flex>
             </Stack>
@@ -161,7 +164,7 @@ function Demo() {
   return (
     <SimpleGrid cols={3} verticalSpacing="lg">
       {testData.map((item) => (
-        <Flip key={item.title} h={WIDGET_HEIGHT}>
+        <Flip key={item.title} h={WIDGET_HEIGHT} directionFlipIn="positive">
           <Card h={WIDGET_HEIGHT} shadow="sm" radius="md" withBorder>
             <Card.Section>
               <Image h={IMAGE_HEIGHT} src={item.image} alt={item.title} />
@@ -190,7 +193,9 @@ function Demo() {
 
               <Flex justify="right">
                 <Flip.Target>
-                  <Button>Back</Button>
+                  <Button size="xs" rightSection={<IconArrowRight />} variant="outline">
+                    Back
+                  </Button>
                 </Flip.Target>
               </Flex>
             </Stack>
