@@ -5,3 +5,4 @@ export { defaultFlipped } from './Flip.demo.default-flipped';
 export { signin } from './Flip.demo.signin';
 export { uncontrolled } from './Flip.demo.uncontrolled';
 export { usage } from './Flip.demo.usage';
+export { useCaseGrid } from './Flip.demo.usecase-grid';
