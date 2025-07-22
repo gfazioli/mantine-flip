@@ -212,10 +212,12 @@ export const useCaseGrid: MantineDemo = {
     {
       code,
       fileName: 'Demo.tsx',
+      language: 'tsx',
     },
     {
       code: data,
       fileName: 'data.ts',
+      language: 'js',
     },
   ],
   component: Demo,
