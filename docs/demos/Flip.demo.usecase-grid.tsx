@@ -10,7 +10,7 @@ import { Badge, Button, Card, Flex, Image, SimpleGrid, Stack, Text, Title } from
 import testData from './data';
 
 function Demo() {
-  const WIDGET_HEIGHT = 350;
+  const WIDGET_HEIGHT = 360;
   const IMAGE_HEIGHT = 200;
 
   return (
@@ -25,12 +25,12 @@ function Demo() {
             <Stack mt={8}>
               <Title>{item.title}</Title>
               <Text>{item.description}</Text>
+              <Flex justify="right">
+                <Flip.Target>
+                  <Button>More info</Button>
+                </Flip.Target>
+              </Flex>
             </Stack>
-            <Flex justify="right">
-              <Flip.Target>
-                <Button>More info</Button>
-              </Flip.Target>
-            </Flex>
           </Card>
           <Card h={WIDGET_HEIGHT} shadow="sm" radius="md" withBorder>
             <Stack mt={8} justify="space-between" h="100%">
@@ -64,47 +64,47 @@ export default [
   {
     title: 'Test 1',
     description: 'Test 1 description',
-    image: 'https://placecats.com/300/200',
+    image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-1.png',
   },
   {
     title: 'Test 2',
     description: 'Test 2 description',
-    image: 'https://placecats.com/300/200',
+    image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-2.png',
   },
   {
     title: 'Test 3',
     description: 'Test 3 description',
-    image: 'https://placecats.com/300/200',
+    image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-3.png',
   },
   {
     title: 'Test 4',
     description: 'Test 4 description',
-    image: 'https://placecats.com/300/200',
+    image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-4.png',
   },
   {
     title: 'Test 5',
     description: 'Test 5 description',
-    image: 'https://placecats.com/300/200',
+    image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-5.png',
   },
   {
     title: 'Test 6',
     description: 'Test 6 description',
-    image: 'https://placecats.com/300/200',
+    image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-6.png',
   },
   {
     title: 'Test 7',
     description: 'Test 7 description',
-    image: 'https://placecats.com/300/200',
+    image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-7.png',
   },
   {
     title: 'Test 8',
     description: 'Test 8 description',
-    image: 'https://placecats.com/300/200',
+    image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png',
   },
   {
     title: 'Test 9',
     description: 'Test 9 description',
-    image: 'https://placecats.com/300/200',
+    image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-9.png',
   },
 ];
 `;
@@ -113,52 +113,52 @@ const testData = [
   {
     title: 'Test 1',
     description: 'Test 1 description',
-    image: 'https://placecats.com/300/200',
+    image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-1.png',
   },
   {
     title: 'Test 2',
     description: 'Test 2 description',
-    image: 'https://placecats.com/300/200',
+    image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-2.png',
   },
   {
     title: 'Test 3',
     description: 'Test 3 description',
-    image: 'https://placecats.com/300/200',
+    image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-3.png',
   },
   {
     title: 'Test 4',
     description: 'Test 4 description',
-    image: 'https://placecats.com/300/200',
+    image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-4.png',
   },
   {
     title: 'Test 5',
     description: 'Test 5 description',
-    image: 'https://placecats.com/300/200',
+    image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-5.png',
   },
   {
     title: 'Test 6',
     description: 'Test 6 description',
-    image: 'https://placecats.com/300/200',
+    image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-6.png',
   },
   {
     title: 'Test 7',
     description: 'Test 7 description',
-    image: 'https://placecats.com/300/200',
+    image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-7.png',
   },
   {
     title: 'Test 8',
     description: 'Test 8 description',
-    image: 'https://placecats.com/300/200',
+    image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png',
   },
   {
     title: 'Test 9',
     description: 'Test 9 description',
-    image: 'https://placecats.com/300/200',
+    image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-9.png',
   },
 ];
 
 function Demo() {
-  const WIDGET_HEIGHT = 350;
+  const WIDGET_HEIGHT = 360;
   const IMAGE_HEIGHT = 200;
 
   return (
@@ -173,12 +173,12 @@ function Demo() {
             <Stack mt={8}>
               <Title>{item.title}</Title>
               <Text>{item.description}</Text>
+              <Flex justify="right">
+                <Flip.Target>
+                  <Button>More info</Button>
+                </Flip.Target>
+              </Flex>
             </Stack>
-            <Flex justify="right">
-              <Flip.Target>
-                <Button>More info</Button>
-              </Flip.Target>
-            </Flex>
           </Card>
           <Card h={WIDGET_HEIGHT} shadow="sm" radius="md" withBorder>
             <Stack mt={8} justify="space-between" h="100%">
