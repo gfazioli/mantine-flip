@@ -3,9 +3,7 @@ import '@mantine/code-highlight/styles.css';
 import '@mantinex/mantine-logo/styles.css';
 import '@mantinex/mantine-header/styles.css';
 import '@mantinex/demo/styles.css';
-
 import '@mantine/dates/styles.css';
-
 import '@gfazioli/mantine-flip/styles.css';
 
 import { AppProps } from 'next/app';
@@ -13,9 +11,8 @@ import Head from 'next/head';
 import { CodeHighlightAdapterProvider, createShikiAdapter } from '@mantine/code-highlight';
 import { MantineProvider } from '@mantine/core';
 import favicon from '../assets/favicon.svg';
-import { theme } from '../theme';
-
 import { Footer } from '../components/Footer';
+import { theme } from '../theme';
 
 async function loadShiki() {
   const { createHighlighter } = await import('shiki');
