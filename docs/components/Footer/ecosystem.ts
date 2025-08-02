@@ -12,6 +12,12 @@ export const ecosystem = [
     newWindow: true,
   },
   {
+    key: 'mantine-clock',
+    title: 'Mantine Clock',
+    href: 'https://gfazioli.github.io/mantine-clock',
+    newWindow: true,
+  },
+  {
     key: 'mantine-marquee',
     title: 'Mantine Marquee',
     href: 'https://gfazioli.github.io/mantine-marquee',
