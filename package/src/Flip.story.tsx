@@ -41,47 +41,47 @@ export function CorrectGrid() {
     {
       title: 'Test 1',
       description: 'Test 1 description',
-      image: 'https://placecats.com/300/200',
+      image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-1.png',
     },
     {
       title: 'Test 2',
       description: 'Test 2 description',
-      image: 'https://placecats.com/300/200',
+      image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-2.png',
     },
     {
       title: 'Test 3',
       description: 'Test 3 description',
-      image: 'https://placecats.com/300/200',
+      image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-3.png',
     },
     {
       title: 'Test 4',
       description: 'Test 4 description',
-      image: 'https://placecats.com/300/200',
+      image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-4.png',
     },
     {
       title: 'Test 5',
       description: 'Test 5 description',
-      image: 'https://placecats.com/300/200',
+      image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-5.png',
     },
     {
       title: 'Test 6',
       description: 'Test 6 description',
-      image: 'https://placecats.com/300/200',
+      image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-6.png',
     },
     {
       title: 'Test 7',
       description: 'Test 7 description',
-      image: 'https://placecats.com/300/200',
+      image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-7.png',
     },
     {
       title: 'Test 8',
       description: 'Test 8 description',
-      image: 'https://placecats.com/300/200',
+      image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png',
     },
     {
       title: 'Test 9',
       description: 'Test 9 description',
-      image: 'https://placecats.com/300/200',
+      image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-9.png',
     },
   ];
   return (
@@ -109,47 +109,47 @@ export function WithinGrid() {
     {
       title: 'Test 1',
       description: 'Test 1 description',
-      image: 'https://placecats.com/300/200',
+      image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-1.png',
     },
     {
       title: 'Test 2',
       description: 'Test 2 description',
-      image: 'https://placecats.com/300/200',
+      image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-2.png',
     },
     {
       title: 'Test 3',
       description: 'Test 3 description',
-      image: 'https://placecats.com/300/200',
+      image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-3.png',
     },
     {
       title: 'Test 4',
       description: 'Test 4 description',
-      image: 'https://placecats.com/300/200',
+      image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-4.png',
     },
     {
       title: 'Test 5',
       description: 'Test 5 description',
-      image: 'https://placecats.com/300/200',
+      image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-5.png',
     },
     {
       title: 'Test 6',
       description: 'Test 6 description',
-      image: 'https://placecats.com/300/200',
+      image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-6.png',
     },
     {
       title: 'Test 7',
       description: 'Test 7 description',
-      image: 'https://placecats.com/300/200',
+      image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-7.png',
     },
     {
       title: 'Test 8',
       description: 'Test 8 description',
-      image: 'https://placecats.com/300/200',
+      image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png',
     },
     {
       title: 'Test 9',
       description: 'Test 9 description',
-      image: 'https://placecats.com/300/200',
+      image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-9.png',
     },
   ];
   return (
