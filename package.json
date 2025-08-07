@@ -32,10 +32,10 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
-    "@ianvs/prettier-plugin-sort-imports": "^4.5.1",
+    "@ianvs/prettier-plugin-sort-imports": "^4.6.0",
     "@mantine-tests/core": "^2.0.0",
-    "@mantine/core": "8.2.2",
-    "@mantine/hooks": "8.2.2",
+    "@mantine/core": "8.2.4",
+    "@mantine/hooks": "8.2.4",
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-replace": "^6.0.2",
     "@storybook/addon-essentials": "^8.6.14",
@@ -62,7 +62,7 @@
     "eslint-config-mantine": "^4.0.3",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
-    "fs-extra": "^11.3.0",
+    "fs-extra": "^11.3.1",
     "gh-pages": "^6.3.0",
     "hash-css-selector": "^1.1.0",
     "identity-obj-proxy": "^3.0.0",
@@ -92,10 +92,10 @@
     "syncpack": "^13.0.4",
     "tsx": "^4.20.3",
     "typescript": "5.9.2",
-    "typescript-eslint": "^8.38.0",
+    "typescript-eslint": "^8.39.0",
     "version-next": "^1.0.2",
     "vite": "^6.3.5",
     "yargs": "^17.7.2",
-    "zx": "^8.7.2"
+    "zx": "^8.8.0"
   }
 }
