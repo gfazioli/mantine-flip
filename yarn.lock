@@ -2305,7 +2305,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/dates@npm:^8.3.8":
+"@mantine/dates@npm:8.3.8":
   version: 8.3.8
   resolution: "@mantine/dates@npm:8.3.8"
   dependencies:
@@ -7283,7 +7283,7 @@ __metadata:
     "@gfazioli/mantine-flip": "workspace:*"
     "@mantine/code-highlight": "npm:8.3.8"
     "@mantine/core": "npm:8.3.8"
-    "@mantine/dates": "npm:^8.3.8"
+    "@mantine/dates": "npm:8.3.8"
     "@mantine/hooks": "npm:8.3.8"
     "@mantinex/demo": "npm:^2.0.0"
     "@mantinex/dev-icons": "npm:^2.0.0"
