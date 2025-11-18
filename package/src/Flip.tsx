@@ -14,10 +14,13 @@ import { FlipContextProvider } from './Flip.context';
 import { FlipTarget } from './FlipTarget/FlipTarget';
 import classes from './Flip.module.css';
 
-export type FlipStylesNames = 'root' | 'flip-inner' | 'flip-content';
+export type FlipStylesNames = 'root' | 'flip-container' | 'flip-front-face' | 'flip-back-face';
 
 export type FlipCssVariables = {
   root: '--flip-perspective' | '--flip-transition-duration' | '--flip-transition-timing-function';
+  'flip-container': never;
+  'flip-front-face': never;
+  'flip-back-face': never;
 };
 
 export type FlipDirection = 'horizontal' | 'vertical';
@@ -88,6 +91,9 @@ const varsResolver = createVarsResolver<FlipFactory>((_, { perspective, easing, 
     '--flip-transition-duration': duration === undefined ? '.8s' : `${duration}s`,
     '--flip-transition-timing-function': easing === undefined ? 'ease-in-out' : easing,
   },
+  'flip-container': {},
+  'flip-front-face': {},
+  'flip-back-face': {},
 }));
 
 export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
@@ -204,13 +210,9 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
       }}
     >
       <Box ref={ref} {...getStyles('root')} {...others}>
-        <div ref={containerRef} {...getStyles('flip-inner')} style={getDirectionIn()}>
-          <div {...getStyles('flip-content')} style={{ zIndex: 0 }}>
-            {frontChild}
-          </div>
-          <div {...getStyles('flip-content')} style={getBackRotation()}>
-            {backChild}
-          </div>
+        <div ref={containerRef} {...getStyles('flip-container', { style: getDirectionIn() })}>
+          <div {...getStyles('flip-front-face', { style: { zIndex: 0 } })}>{frontChild}</div>
+          <div {...getStyles('flip-back-face', { style: getBackRotation() })}>{backChild}</div>
         </div>
       </Box>
     </FlipContextProvider>

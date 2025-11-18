@@ -1,8 +1,10 @@
 export { configurator } from './Flip.demo.configurator';
 export { controlled } from './Flip.demo.controlled';
-export { creditCard } from './Flip.demo.creditcard';
+export { creditCard } from './Flip.demo.credit-card';
 export { defaultFlipped } from './Flip.demo.default-flipped';
 export { signin } from './Flip.demo.signin';
+export { styled } from './Flip.demo.styled';
+export { stylesApi } from './Flip.demo.stylesApi';
 export { uncontrolled } from './Flip.demo.uncontrolled';
 export { usage } from './Flip.demo.usage';
 export { useCaseGrid } from './Flip.demo.usecase-grid';
