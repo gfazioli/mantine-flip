@@ -74,6 +74,6 @@ export const styled: MantineDemo = {
   dimmed: true,
   code: [
     { fileName: 'Demo.tsx', code, language: 'tsx' },
-    { fileName: 'JsonTree.module.css', code: moduleCss, language: 'css' },
+    { fileName: 'Flip.module.css', code: moduleCss, language: 'css' },
   ],
 };
