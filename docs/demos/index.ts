@@ -7,4 +7,4 @@ export { styled } from './Flip.demo.styled';
 export { stylesApi } from './Flip.demo.stylesApi';
 export { uncontrolled } from './Flip.demo.uncontrolled';
 export { usage } from './Flip.demo.usage';
-export { useCaseGrid } from './Flip.demo.usecase-grid';
+export { useCaseGrid } from './Flip.demo.use-case-grid';
