@@ -9,6 +9,7 @@
   transition: transform var(--flip-transition-duration, '.1')
     var(--flip-transition-timing-function, 'ease-in-out');
   transform-style: preserve-3d;
+  will-change: transform;
 }
 
 .flip-front-face,
