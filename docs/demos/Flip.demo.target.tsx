@@ -46,12 +46,12 @@ function Demo() {
       <Flip w={300} h={200}>
         <Paper shadow="md" p="xl" withBorder w="100%" h="100%">
           <Text>This card has multiple targets</Text>
-          
+
           <Group mt="xl">
             <Flip.Target>
               <Button>Button Target</Button>
             </Flip.Target>
-            
+
             <Flip.Target>
               <Text style={{ cursor: 'pointer' }} td="underline" c="blue">
                 Text Target

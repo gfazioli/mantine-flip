@@ -11,4 +11,3 @@ export { target } from './Flip.demo.target';
 export { uncontrolled } from './Flip.demo.uncontrolled';
 export { usage } from './Flip.demo.usage';
 export { useCaseGrid } from './Flip.demo.use-case-grid';
-
