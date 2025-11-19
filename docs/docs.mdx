@@ -21,6 +21,10 @@ import '@gfazioli/mantine-flip/styles.layer.css';
 
 <Demo data={demos.configurator} />
 
+> **IMPORTANT**
+>
+> The `Flip` component must have exactly **two** children. The first child is the front face, and the second child is the back face.
+
 ## Uncontrolled
 
 <Demo data={demos.uncontrolled} />
@@ -42,6 +46,24 @@ This is useful when you want to control the state of the card from the parent co
 You may display the initial face of the card by setting the `defaultFlipped` prop to `true`.
 
 <Demo data={demos.defaultFlipped} />
+
+## Direction
+
+You can change the flip direction to `vertical` using the `direction` prop.
+
+<Demo data={demos.direction} />
+
+## Custom Flip Transitions
+
+You can customize the flip transition direction using `directionFlipIn` and `directionFlipOut` props.
+
+<Demo data={demos.customFlip} />
+
+## Flip Target
+
+You can use `Flip.Target` to make any element clickable to toggle the flip state. This is useful when you want to trigger the flip from a button or a specific area of the card.
+
+<Demo data={demos.target} />
 
 ## Styled Flip component
 
