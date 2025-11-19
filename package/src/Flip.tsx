@@ -166,7 +166,7 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
     }
   }, [_flipped]);
 
-  const childrenArray = useMemo(() => React.Children.toArray(children), [children]);
+  const childrenArray = React.Children.toArray(children);
 
   if (childrenArray.length !== 2) {
     throw new Error('Flip component must have exactly two children');

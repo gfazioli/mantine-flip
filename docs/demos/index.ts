@@ -4,6 +4,7 @@ export { creditCard } from './Flip.demo.credit-card';
 export { customFlip } from './Flip.demo.custom-flip';
 export { defaultFlipped } from './Flip.demo.default-flipped';
 export { direction } from './Flip.demo.direction';
+export { profile } from './Flip.demo.profile';
 export { signin } from './Flip.demo.signin';
 export { styled } from './Flip.demo.styled';
 export { stylesApi } from './Flip.demo.stylesApi';
