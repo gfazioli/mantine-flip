@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useMemo, useRef, useState } from 'react';
 import {
   Box,
   BoxProps,
@@ -166,25 +166,25 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
     }
   }, [_flipped]);
 
-  const childrenArray = React.Children.toArray(children);
+  const childrenArray = useMemo(() => React.Children.toArray(children), [children]);
 
   if (childrenArray.length !== 2) {
     throw new Error('Flip component must have exactly two children');
   }
 
-  function getDirectionIn() {
+  const getDirectionIn = useMemo(() => {
     if (direction === 'horizontal') {
       return { transform: `rotateY(${rotateValue}deg)` };
     }
     return { transform: `rotateX(${rotateValue}deg)` };
-  }
+  }, [direction, rotateValue]);
 
-  function getBackRotation() {
+  const getBackRotation = useMemo(() => {
     if (direction === 'horizontal') {
       return { transform: 'rotateY(180deg)' };
     }
     return { transform: 'rotateX(180deg)' };
-  }
+  }, [direction]);
 
   // get the first child from children
   const frontChild = childrenArray[0] as React.ReactElement;
@@ -210,9 +210,9 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
       }}
     >
       <Box ref={ref} {...getStyles('root')} {...others}>
-        <div ref={containerRef} {...getStyles('flip-container', { style: getDirectionIn() })}>
+        <div ref={containerRef} {...getStyles('flip-container', { style: getDirectionIn })}>
           <div {...getStyles('flip-front-face', { style: { zIndex: 0 } })}>{frontChild}</div>
-          <div {...getStyles('flip-back-face', { style: getBackRotation() })}>{backChild}</div>
+          <div {...getStyles('flip-back-face', { style: getBackRotation })}>{backChild}</div>
         </div>
       </Box>
     </FlipContextProvider>
