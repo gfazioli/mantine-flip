@@ -1,3 +1,4 @@
+import React, { useMemo, useRef, useState } from 'react';
 import {
   Box,
   BoxProps,
@@ -9,10 +10,9 @@ import {
   useStyles,
 } from '@mantine/core';
 import { useDidUpdate, useUncontrolled } from '@mantine/hooks';
-import React, { useMemo, useRef, useState } from 'react';
 import { FlipContextProvider } from './Flip.context';
-import classes from './Flip.module.css';
 import { FlipTarget } from './FlipTarget/FlipTarget';
+import classes from './Flip.module.css';
 
 export type FlipStylesNames = 'root' | 'flip-container' | 'flip-front-face' | 'flip-back-face';
 
@@ -166,7 +166,7 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
     }
   }, [_flipped]);
 
-  const childrenArray = React.Children.toArray(children);
+  const childrenArray = useMemo(() => React.Children.toArray(children), [children]);
 
   if (childrenArray.length !== 2) {
     throw new Error('Flip component must have exactly two children');
