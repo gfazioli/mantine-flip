@@ -82,22 +82,6 @@ function Demo() {
 As you can see, the `Flip` component wraps two children, which are the two views that you want to flip between.
 The `Flip.Target` component is used to define the trigger for the flip animation. It can be any component, such as a button, or a link, or even a div.
 
-## Props
-
-| Prop | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| perspective | string | 1000px | The perspective property defines how far the object is away from the user. |
-| duration | number | .8 | The duration in seconds of the flip animation. |
-| easing | string | ease-in-out | The easing function to be used for the flip animation. |
-| flipped | boolean | false | The initial state of the controlled Flip component. |
-| defaultFlipped | boolean | false | The default state of the uncontrolled flip component. |
-| direction | 'horizontal' or 'vertical' | 'horizontal' | The direction of the flip animation. |
-| directionFlipIn | 'negative' or 'positive' | 'negative' | The direction of the flip animation when flipping in. |
-| directionFlipOut | 'negative' or 'positive' | 'positive' | The direction of the flip animation when flipping out. |
-| onChange | (flipped: boolean) => void | - | Callback to be called when the flip state changes. |
-| onBack | () => void | - | Callback to be called when the flip state changes to false. |
-| onFront | () => void | - | Callback to be called when the flip state changes to true. |
-
 <div align="center">
   
 [![Star History Chart](https://api.star-history.com/svg?repos=gfazioli/mantine-flip&type=Timeline)](https://www.star-history.com/#gfazioli/mantine-flip&Timeline)
