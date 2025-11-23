@@ -1,4 +1,5 @@
 import { Flip } from '@gfazioli/mantine-flip';
+import { IconBrandGithub, IconBrandLinkedin, IconBrandTwitter, IconX } from '@tabler/icons-react';
 import {
   ActionIcon,
   Avatar,
@@ -11,7 +12,6 @@ import {
   useMantineTheme,
 } from '@mantine/core';
 import { MantineDemo } from '@mantinex/demo';
-import { IconBrandGithub, IconBrandLinkedin, IconBrandTwitter, IconX } from '@tabler/icons-react';
 
 const code = `
 import { Flip } from '@gfazioli/mantine-flip';
@@ -269,5 +269,5 @@ export const profile: MantineDemo = {
   centered: true,
   maxWidth: 400,
   dimmed: true,
-  defaultExpanded: false
+  defaultExpanded: false,
 };
