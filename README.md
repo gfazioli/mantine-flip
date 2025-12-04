@@ -1,8 +1,6 @@
 # Mantine Flip Component
 
-https://github.com/user-attachments/assets/cc968450-9d8c-4b16-be58-a6766597742e
-
----
+<img width="2752" height="1536" alt="Gemini_Generated_Image_a6xmija6xmija6xm" src="https://github.com/user-attachments/assets/b3bc2a14-f8df-4ad5-b97e-73a1eafc8a39" />
 
 <div align="center">
 
@@ -87,3 +85,6 @@ The `Flip.Target` component is used to define the trigger for the flip animation
 [![Star History Chart](https://api.star-history.com/svg?repos=gfazioli/mantine-flip&type=Timeline)](https://www.star-history.com/#gfazioli/mantine-flip&Timeline)
 
 </div>
+
+---
+https://github.com/user-attachments/assets/cc968450-9d8c-4b16-be58-a6766597742e
