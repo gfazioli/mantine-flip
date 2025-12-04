@@ -1,6 +1,7 @@
 # Mantine Flip Component
 
-<img width="2752" height="1536" alt="Gemini_Generated_Image_a6xmija6xmija6xm" src="https://github.com/user-attachments/assets/b3bc2a14-f8df-4ad5-b97e-73a1eafc8a39" />
+<img width="1024" height="565" alt="Mantine Flip" src="https://github.com/user-attachments/assets/4559da51-4c49-4119-860c-16aade4eeb43" />
+
 
 <div align="center">
 
