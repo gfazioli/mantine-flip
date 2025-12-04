@@ -1,7 +1,6 @@
 # Mantine Flip Component
 
-<img width="1024" height="565" alt="Mantine Flip" src="https://github.com/user-attachments/assets/4559da51-4c49-4119-860c-16aade4eeb43" />
-
+<img width="2752" height="1536" alt="Mantine Flip" src="https://github.com/user-attachments/assets/81a00eee-c1f2-40f1-8ad4-4357619cf855" />
 
 <div align="center">
 
@@ -87,5 +86,4 @@ The `Flip.Target` component is used to define the trigger for the flip animation
 
 </div>
 
----
 https://github.com/user-attachments/assets/cc968450-9d8c-4b16-be58-a6766597742e
