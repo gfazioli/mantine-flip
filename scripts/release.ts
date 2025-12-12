@@ -108,7 +108,9 @@ async function release() {
 
   open(
     githubRelease({
-      repoUrl: (packageJson.repository.url || packageJson.repository).replace('.git', ''),
+      repoUrl: (packageJson.repository.url || packageJson.repository)
+        .replace('.git', '')
+        .replace('git+', ''),
       tag: nextVersion,
       title: nextVersion,
     })
