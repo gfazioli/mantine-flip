@@ -34,7 +34,10 @@
     "./styles.css": "./dist/styles.css",
     "./styles.layer.css": "./dist/styles.layer.css"
   },
-  "repository": "https://github.com/gfazioli/mantine-flip.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gfazioli/mantine-flip.git"
+  },
   "peerDependencies": {
     "@mantine/core": ">=7.0.0",
     "@mantine/hooks": ">=7.0.0",
