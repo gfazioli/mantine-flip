@@ -15,22 +15,11 @@
 
 This component is created on top of the [Mantine](https://mantine.dev/) library.
 
-[![Mantine UI Library](https://img.shields.io/badge/-MANTINE_UI_LIBRARY-blue?style=for-the-badge&labelColor=black&logo=mantine
-)](https://mantine.dev/)
+[Mantine Flip](https://gfazioli.github.io/mantine-flip/) is a two-face container that animates between a front and a back view, ideal for compact UIs that need progressive disclosure (e.g., editing panels, settings, sign-in/sign-up toggles, or profile details). It supports both uncontrolled usage with Flip.Target to wire any element as a click trigger, and controlled usage via flipped/defaultFlipped using React state for full synchronization with your app logic. The component enforces exactly two children, accepts size constraints (w/h), and offers transition customization such as vertical flipping and distinct rotation directions for flip-in and flip-out. Styling hooks (classNames/Styles API) let you target inner parts for design refinement, while examples demonstrate practical patterns like credit-card editing, modal-like settings panes, and multi-target triggers within a single face.
 
-It allows for easy management of two separate views, such as in the cases of a registration form and a login form.
-Essentially, when switching between views, the component will handle the flip animation.
-
-
-[![Video](https://img.shields.io/badge/-Watch_the_Video-blue?style=for-the-badge&labelColor=black&logo=youtube
-)](https://youtu.be/RzRUb3IDcDw)
-[![Demo and Documentation](https://img.shields.io/badge/-Demo_%26_Documentation-blue?style=for-the-badge&labelColor=black&logo=typescript
-)](https://gfazioli.github.io/mantine-flip/)
-[![Mantine Extensions HUB](https://img.shields.io/badge/-Mantine_Extensions_Hub-blue?style=for-the-badge&labelColor=blue
-)](https://mantine-extensions.vercel.app/)
-
-👉 You can find more components on the [Mantine Extensions Hub](https://mantine-extensions.vercel.app/) library.
-
+> [!note]
+>
+> → [Demo and Documentation](https://gfazioli.github.io/mantine-flip/) → [Youtube Video](https://www.youtube.com/playlist?list=PL85tTROKkZrWyqCcmNCdWajpx05-cTal4) → [More Mantine Components](https://mantine-extensions.vercel.app/)
 
 ## Installation
 
@@ -80,10 +69,11 @@ function Demo() {
 As you can see, the `Flip` component wraps two children, which are the two views that you want to flip between.
 The `Flip.Target` component is used to define the trigger for the flip animation. It can be any component, such as a button, or a link, or even a div.
 
-<div align="center">
+---
+
+https://github.com/user-attachments/assets/cc968450-9d8c-4b16-be58-a6766597742e
+
+---
   
 [![Star History Chart](https://api.star-history.com/svg?repos=gfazioli/mantine-flip&type=Timeline)](https://www.star-history.com/#gfazioli/mantine-flip&Timeline)
 
-</div>
-
-https://github.com/user-attachments/assets/cc968450-9d8c-4b16-be58-a6766597742e
