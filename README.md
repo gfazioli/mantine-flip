@@ -9,6 +9,10 @@
   [![NPM Downloads](https://img.shields.io/npm/dy/%40gfazioli%2Fmantine-flip?style=for-the-badge&label=%20&color=f90)](https://www.npmjs.com/package/@gfazioli/mantine-flip)
   ![NPM License](https://img.shields.io/npm/l/%40gfazioli%2Fmantine-flip?style=for-the-badge)
 
+---
+
+[<kbd> <br/> ❤️ If this component has been useful to you or your team, please consider becoming a sponsor <br/> </kbd>](https://github.com/sponsors/gfazioli?o=esc)  
+
 </div>
 
 ## Overview
@@ -68,6 +72,28 @@ function Demo() {
 
 As you can see, the `Flip` component wraps two children, which are the two views that you want to flip between.
 The `Flip.Target` component is used to define the trigger for the flip animation. It can be any component, such as a button, or a link, or even a div.
+
+## Sponsor
+
+<div align="center">
+
+[<kbd> <br/> ❤️ If this component has been useful to you or your team, please consider becoming a sponsor <br/> </kbd>](https://github.com/sponsors/gfazioli?o=esc)
+
+</div>
+
+Your support helps me:
+
+- Keep the project actively maintained with timely bug fixes and security updates 	
+- Add new features, improve performance, and refine the developer experience 	
+- Expand test coverage and documentation for smoother adoption 	
+- Ensure long‑term sustainability without relying on ad hoc free time 	
+- Prioritize community requests and roadmap items that matter most
+
+Open source thrives when those who benefit can give back—even a small monthly contribution makes a real difference. Sponsorships help cover maintenance time, infrastructure, and the countless invisible tasks that keep a project healthy.
+
+Your help truly matters.
+
+💚 [Become a sponsor](https://github.com/sponsors/gfazioli?o=esc) today and help me keep this project reliable, up‑to‑date, and growing for everyone.
 
 ---
 
