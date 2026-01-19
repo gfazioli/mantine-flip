@@ -1,6 +1,6 @@
 # Mantine Flip Component
 
-<img width="2752" height="1536" alt="Mantine Flip" src="https://github.com/user-attachments/assets/81a00eee-c1f2-40f1-8ad4-4357619cf855" />
+<img alt="Mantine Flip" src="https://github.com/gfazioli/mantine-flip/blob/master/logo.png" />
 
 <div align="center">
 
@@ -83,10 +83,10 @@ The `Flip.Target` component is used to define the trigger for the flip animation
 
 Your support helps me:
 
-- Keep the project actively maintained with timely bug fixes and security updates 	
-- Add new features, improve performance, and refine the developer experience 	
-- Expand test coverage and documentation for smoother adoption 	
-- Ensure long‑term sustainability without relying on ad hoc free time 	
+- Keep the project actively maintained with timely bug fixes and security updates	
+- Add new features, improve performance, and refine the developer experience	
+- Expand test coverage and documentation for smoother adoption	
+- Ensure long‑term sustainability without relying on ad hoc free time	
 - Prioritize community requests and roadmap items that matter most
 
 Open source thrives when those who benefit can give back—even a small monthly contribution makes a real difference. Sponsorships help cover maintenance time, infrastructure, and the countless invisible tasks that keep a project healthy.
