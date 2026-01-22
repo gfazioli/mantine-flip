@@ -11,7 +11,7 @@
   "dependencies": {
     "@gfazioli/mantine-flip": "workspace:*",
     "@mantine/code-highlight": "8.3.12",
-    "@mantine/core": "8.3.12",
+    "@mantine/core": "8.3.13",
     "@mantine/dates": "8.3.12",
     "@mantine/hooks": "8.3.12",
     "@mantinex/demo": "^2.0.0",
