@@ -35,7 +35,7 @@
     "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
     "@mantine-tests/core": "^2.0.0",
     "@mantine/core": "8.3.12",
-    "@mantine/hooks": "8.3.12",
+    "@mantine/hooks": "8.3.13",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-replace": "^6.0.3",
     "@storybook/addon-essentials": "^8.6.15",
