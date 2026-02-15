@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Flip } from '@gfazioli/mantine-flip';
 import {
   Container,
@@ -16,13 +17,34 @@ import { useDisclosure, useHotkeys } from '@mantine/hooks';
 import { MantineDemo } from '@mantinex/demo';
 
 const code = `
+import { useEffect, useState } from 'react';
+import { Flip } from '@gfazioli/mantine-flip';
+import {
+  Container,
+  getGradient,
+  Group,
+  Paper,
+  Stack,
+  Text,
+  TextInput,
+  Title,
+  useMantineColorScheme,
+  useMantineTheme,
+} from '@mantine/core';
+import { MonthPickerInput } from '@mantine/dates';
+import { useDisclosure, useHotkeys } from '@mantine/hooks';
+
 function Demo() {
   const [flipped, { toggle, close, open }] = useDisclosure(false);
+  const [mounted, setMounted] = useState(false);
 
   const theme = useMantineTheme();
   const { colorScheme } = useMantineColorScheme();
   useHotkeys([['escape', close]]);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   function FrontCreditCard() {
     return (
@@ -58,7 +80,7 @@ function Demo() {
     return (
       <Paper
         bg={
-          colorScheme === 'light'
+          !mounted || colorScheme === 'light'
             ? getGradient({ deg: 180, from: 'gray.1', to: 'indigo.1' }, theme)
             : getGradient({ deg: 180, from: 'dark.8', to: 'dark.9' }, theme)
         }
@@ -118,10 +140,15 @@ function Demo() {
 
 function Demo() {
   const [flipped, { close, open }] = useDisclosure(false);
+  const [mounted, setMounted] = useState(false);
 
   const theme = useMantineTheme();
   const { colorScheme } = useMantineColorScheme();
   useHotkeys([['escape', close]]);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   function FrontCreditCard() {
     return (
@@ -157,7 +184,7 @@ function Demo() {
     return (
       <Paper
         bg={
-          colorScheme === 'light'
+          !mounted || colorScheme === 'light'
             ? getGradient({ deg: 180, from: 'gray.1', to: 'indigo.1' }, theme)
             : getGradient({ deg: 180, from: 'dark.8', to: 'dark.9' }, theme)
         }
