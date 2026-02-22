@@ -3440,7 +3440,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/blocks@npm:8.6.15, @storybook/blocks@npm:^8.6.15":
+"@storybook/blocks@npm:8.6.15":
   version: 8.6.15
   resolution: "@storybook/blocks@npm:8.6.15"
   dependencies:
@@ -3456,6 +3456,25 @@ __metadata:
     react-dom:
       optional: true
   checksum: 10c0/30c326bec59245a74fd77fe9647ccdef49ee8b56a654a088a873ececbc26795c6cf3546fc7ee7c446c9d5e6fae089ce85c494c6ebe358c4a312adc733c8cb904
+  languageName: node
+  linkType: hard
+
+"@storybook/blocks@npm:^8.6.15":
+  version: 8.6.17
+  resolution: "@storybook/blocks@npm:8.6.17"
+  dependencies:
+    "@storybook/icons": "npm:^1.2.12"
+    ts-dedent: "npm:^2.0.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+    storybook: ^8.6.17
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 10c0/a8f6756a795b95ca1e4aa64cabefc491175a8fa63f09730c3fa03a097554cbc821a971d8161d6b5c8be6887823e0fff6e5a0656836bec5f19c866672f0732fed
   languageName: node
   linkType: hard
 
