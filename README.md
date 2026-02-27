@@ -1,6 +1,6 @@
 # Mantine Flip Component
 
-<img alt="Mantine Flip" src="https://github.com/gfazioli/mantine-flip/blob/master/logo.png" />
+<img alt="Mantine Flip" src="https://github.com/gfazioli/mantine-flip/blob/master/logo.jpeg" />
 
 <div align="center">
 
