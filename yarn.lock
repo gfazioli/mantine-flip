@@ -14761,13 +14761,13 @@ __metadata:
   linkType: hard
 
 "simple-git@npm:^3.32.1":
-  version: 3.32.1
-  resolution: "simple-git@npm:3.32.1"
+  version: 3.32.3
+  resolution: "simple-git@npm:3.32.3"
   dependencies:
     "@kwsites/file-exists": "npm:^1.1.1"
     "@kwsites/promise-deferred": "npm:^1.1.1"
     debug: "npm:^4.4.0"
-  checksum: 10c0/7f825a55a3e7f5dd5a62140f7e2f2723737f60a7d45779b917f677b7867f991c2b16cfa0c4d8bad6136d4e00019573438c2c7d02be7ac34b5cc83a7e79ab8a59
+  checksum: 10c0/b08ad0811b82d69a9b150109cbf29247bc13f8d5fb5380dcb834a5e0467124c3b5a41a2b9a5dd3c16f1edc9af7fae9add5182ac6476ef0d50e2341c7820fa0f0
   languageName: node
   linkType: hard
 
