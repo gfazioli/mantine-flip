@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(yarn jest:*)",
+      "Bash(yarn build:*)",
+      "Bash(npx storybook:*)"
+    ]
+  }
+}
