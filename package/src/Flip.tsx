@@ -231,6 +231,11 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
         'Flip component requires both Flip.Front and Flip.Back when using compound components'
       );
     }
+    if (childrenArray.length !== 2) {
+      throw new Error(
+        'Flip component with Flip.Front and Flip.Back must have exactly two children, no extra elements allowed'
+      );
+    }
   } else if (childrenArray.length !== 2) {
     throw new Error(
       'Flip component must have exactly two children, or use Flip.Front and Flip.Back'
@@ -254,31 +259,19 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
     return { transform: 'rotateX(180deg)' };
   }, [direction]);
 
-  const front = () => {
-    setFlipped(false);
-    if (_flipped) {
-      onFront?.();
-    }
-  };
-
-  const back = () => {
-    backMountedRef.current = true;
-    setFlipped(true);
-    if (!_flipped) {
-      onBack?.();
-    }
-  };
-
   const toggleFlip = useCallback(() => {
     if (disabled) {
       return;
     }
     if (_flipped) {
-      front();
+      setFlipped(false);
+      onFront?.();
     } else {
-      back();
+      backMountedRef.current = true;
+      setFlipped(true);
+      onBack?.();
     }
-  }, [disabled, _flipped]);
+  }, [disabled, _flipped, onFront, onBack]);
 
   const handleTransitionEnd = useCallback(
     (event: React.TransitionEvent<HTMLDivElement>) => {
@@ -349,10 +342,16 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
           {...getStyles('flip-container', { style: getDirectionIn })}
           onTransitionEnd={handleTransitionEnd}
         >
-          <div {...getStyles('flip-front-face', { style: { zIndex: 0 } })} aria-hidden={_flipped}>
+          <div
+            {...getStyles('flip-front-face', { style: { zIndex: 0 } })}
+            inert={_flipped || undefined}
+          >
             {frontChild}
           </div>
-          <div {...getStyles('flip-back-face', { style: getBackRotation })} aria-hidden={!_flipped}>
+          <div
+            {...getStyles('flip-back-face', { style: getBackRotation })}
+            inert={!_flipped || undefined}
+          >
             {backMountedRef.current ? backChild : null}
           </div>
         </div>
