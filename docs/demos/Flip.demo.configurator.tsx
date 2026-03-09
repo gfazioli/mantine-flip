@@ -14,10 +14,10 @@ import {
 } from '@mantine/core';
 import { MantineDemo } from '@mantinex/demo';
 
-function Wrapper(props: any) {
+function Wrapper({ perspective, ...props }: any) {
   return (
     <Center>
-      <Flip h={200} w={400} {...props}>
+      <Flip h={200} w={400} perspective={`${perspective}px`} {...props}>
         <Card shadow="sm" padding="lg" radius="md" withBorder>
           <Card.Section>
             <Image
@@ -180,7 +180,15 @@ export const configurator: MantineDemo = {
       initialValue: 'ease-in-out',
       libraryValue: 'ease-in-out',
     },
-    { prop: 'perspective', type: 'string', initialValue: '1000px', libraryValue: '1000px' },
+    {
+      prop: 'perspective',
+      type: 'number',
+      initialValue: 1000,
+      libraryValue: 1000,
+      step: 100,
+      min: 0,
+      max: 5000,
+    },
     {
       prop: 'duration',
       type: 'number',
