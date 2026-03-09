@@ -5,7 +5,10 @@
       "Bash(yarn build:*)",
       "Bash(npx storybook:*)",
       "Bash(yarn docs:build:*)",
-      "Bash(yarn test:*)"
+      "Bash(yarn test:*)",
+      "Bash(gh pr:*)",
+      "Bash(gh api:*)",
+      "Bash(yarn prettier:write:*)"
     ]
   }
 }
