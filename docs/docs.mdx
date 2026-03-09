@@ -25,6 +25,14 @@ import '@gfazioli/mantine-flip/styles.layer.css';
 >
 > The `Flip` component must have exactly **two** children. The first child is the front face, and the second child is the back face.
 
+## Compound Components
+
+You can use `Flip.Front` and `Flip.Back` compound components for a more explicit and readable API. This makes it clear which child is the front face and which is the back face.
+
+<Demo data={demos.compound} />
+
+> Both approaches are supported: you can either pass two direct children (backward compatible) or use `Flip.Front` / `Flip.Back`. Do not mix the two styles.
+
 ## Uncontrolled
 
 <Demo data={demos.uncontrolled} />
@@ -53,11 +61,41 @@ You can change the flip rotation direction to `vertical` using the `direction` p
 
 <Demo data={demos.direction} />
 
+## Spring Easing
+
+Set `easing="spring"` for a physics-based spring animation that gives the flip a natural, bouncy feel. Compare it side by side with the default `ease-in-out`.
+
+<Demo data={demos.spring} />
+
 ## Custom Flip Transitions
 
 You can customize the flip transition direction using `directionFlipIn` and `directionFlipOut` props.
 
 <Demo data={demos.customFlip} />
+
+## Lazy Back
+
+Use the `lazyBack` prop to defer rendering of the back face until the first flip occurs. This is useful for grids with many flip cards where the back content is heavy — it reduces the initial DOM size and improves performance.
+
+<Demo data={demos.lazyBack} />
+
+## Disabled
+
+You can disable the flip interaction by setting the `disabled` prop to `true`. When disabled, `Flip.Target` clicks and `toggleFlip` calls are ignored.
+
+<Demo data={demos.disabled} />
+
+## onTransitionEnd
+
+The `onTransitionEnd` callback is called when the flip animation completes. This is useful for triggering actions after the flip, such as focusing an input or fetching data.
+
+<Demo data={demos.onTransitionEnd} />
+
+## Swipeable
+
+Enable swipe gestures on touch devices with the `swipeable` prop. The swipe direction follows the `direction` prop automatically (horizontal by default). You can also customize the minimum swipe distance with `swipeThreshold` (default `50px`).
+
+<Demo data={demos.swipeable} />
 
 ## Flip Target
 

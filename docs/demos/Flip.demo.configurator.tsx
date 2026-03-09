@@ -176,6 +176,7 @@ export const configurator: MantineDemo = {
         { label: 'Ease-out', value: 'ease-out' },
         { label: 'Ease-in-out', value: 'ease-in-out' },
         { label: 'Linear', value: 'linear' },
+        { label: 'Spring', value: 'spring' },
       ],
       initialValue: 'ease-in-out',
       libraryValue: 'ease-in-out',
