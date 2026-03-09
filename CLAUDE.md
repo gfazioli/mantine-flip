@@ -47,12 +47,12 @@ Yarn workspaces monorepo with two packages:
 - `Flip.Target` requires an element child (uses `isElement`/`cloneElement`) — throws otherwise.
 - Supports both controlled (`flipped` prop) and uncontrolled (`defaultFlipped` prop) modes via `useUncontrolled`.
 - `disabled` prop blocks all flip interactions (Target clicks, toggleFlip, swipe).
-- `onTransitionEnd` callback fires when the CSS flip animation completes (filters on `propertyName === 'transform'`).
-- `lazyBack` defers rendering of the back face until first flip (uses a `useRef` flag, not state, to avoid extra re-renders).
-- `swipeable` enables touch swipe gestures; direction follows the `direction` prop. Uses native `touchstart`/`touchend` events with configurable `swipeThreshold`.
+- `onTransitionEnd` callback fires when the CSS flip animation completes (filters on `propertyName === 'transform'` and `event.target === event.currentTarget` to avoid bubbled transitions from children).
+- `lazyBack` defers rendering of the back face until first flip (uses a `useRef` flag, not state, to avoid extra re-renders). Disabling `lazyBack` at runtime immediately mounts the back face.
+- `swipeable` enables touch swipe gestures; direction follows the `direction` prop. Uses native `touchstart`/`touchend` events with configurable `swipeThreshold`. Touch handlers use a stable ref (`toggleFlipRef`) so listeners are not re-attached on every flip.
 - `easing="spring"` resolves to a CSS `linear()` spring curve. Other easing values pass through directly.
 - Accessibility: root has `aria-live="polite"`, each face gets `inert` toggled based on `_flipped` state to control focusability, and `Flip.Target` adds `data-disabled`/`aria-disabled` when disabled.
-- When `direction`/`directionFlipIn`/`directionFlipOut` props change at runtime, both `rotateValue` and `flipped` state are reset to keep visual and logical state in sync.
+- When `direction`/`directionFlipIn`/`directionFlipOut` props change at runtime, `rotateValue` is reset to 0. In uncontrolled mode, `flipped` state is also reset to `false`. In controlled mode, only `rotateValue` resets (the parent owns `flipped`). A `directionResetRef` flag prevents the `_flipped` effect from immediately re-applying rotation after a direction reset.
 - Rollup builds with `preserveModules`. CSS is extracted, minified, and post-processed by `scripts/prepare-css.ts` into `styles.css` and `styles.layer.css`.
 - Non-index chunks get `'use client'` banner automatically.
 - Tests use `@mantine-tests/core` + Jest with `esbuild-jest` transform.
