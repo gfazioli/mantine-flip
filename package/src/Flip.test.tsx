@@ -252,4 +252,44 @@ describe('Flip', () => {
     }
     expect(onTransitionEnd).not.toHaveBeenCalled();
   });
+
+  it('onTransitionEnd does not fire for bubbled transform transitions from children', () => {
+    const onTransitionEnd = jest.fn();
+    const { container } = render(
+      <Flip onTransitionEnd={onTransitionEnd}>
+        <div>
+          <span className="inner-child">Front</span>
+        </div>
+        <div>Back</div>
+      </Flip>
+    );
+
+    const innerChild = container.querySelector('.inner-child');
+    if (innerChild) {
+      const event = new Event('transitionend', { bubbles: true });
+      Object.defineProperty(event, 'propertyName', { value: 'transform' });
+      innerChild.dispatchEvent(event);
+    }
+    expect(onTransitionEnd).not.toHaveBeenCalled();
+  });
+
+  it('disabling lazyBack at runtime mounts the back face', () => {
+    const { rerender } = render(
+      <Flip lazyBack>
+        <div>Front</div>
+        <div>Back Content</div>
+      </Flip>
+    );
+
+    expect(screen.queryByText('Back Content')).not.toBeInTheDocument();
+
+    rerender(
+      <Flip lazyBack={false}>
+        <div>Front</div>
+        <div>Back Content</div>
+      </Flip>
+    );
+
+    expect(screen.getByText('Back Content')).toBeInTheDocument();
+  });
 });

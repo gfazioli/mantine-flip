@@ -162,6 +162,12 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
   const backMountedRef = useRef(initialFlipped || !lazyBack);
   const rootRef = useRef<HTMLDivElement>(null);
   const touchStartRef = useRef<{ x: number; y: number } | null>(null);
+  const toggleFlipRef = useRef<() => void>(() => {});
+
+  // Fix #9: ensure disabling lazyBack at runtime mounts the back face immediately
+  if (!lazyBack && !backMountedRef.current) {
+    backMountedRef.current = true;
+  }
 
   const [_flipped, setFlipped] = useUncontrolled({
     value: flipped,
@@ -196,7 +202,10 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
       directionResetRef.current = true;
     }
     setRotateValue(0);
-    setFlipped(false);
+    // Only reset flipped state in uncontrolled mode; in controlled mode the parent owns the state
+    if (flipped === undefined) {
+      setFlipped(false);
+    }
   }, [directionFlipIn, directionFlipOut, direction]);
 
   useDidUpdate(() => {
@@ -283,9 +292,12 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
     }
   }, [disabled, _flipped, onFront, onBack]);
 
+  // Keep a stable ref to toggleFlip so swipe useEffect doesn't rebind on every flip
+  toggleFlipRef.current = toggleFlip;
+
   const handleTransitionEnd = useCallback(
     (event: React.TransitionEvent<HTMLDivElement>) => {
-      if (event.propertyName === 'transform') {
+      if (event.propertyName === 'transform' && event.target === event.currentTarget) {
         onTransitionEnd?.();
       }
     },
@@ -320,13 +332,13 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
       touchStartRef.current = null;
 
       if (direction === 'horizontal' && Math.abs(dx) > threshold && Math.abs(dx) > Math.abs(dy)) {
-        toggleFlip();
+        toggleFlipRef.current();
       } else if (
         direction === 'vertical' &&
         Math.abs(dy) > threshold &&
         Math.abs(dy) > Math.abs(dx)
       ) {
-        toggleFlip();
+        toggleFlipRef.current();
       }
     };
 
@@ -337,7 +349,7 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
       el.removeEventListener('touchstart', handleTouchStart);
       el.removeEventListener('touchend', handleTouchEnd);
     };
-  }, [swipeable, disabled, direction, swipeThreshold, toggleFlip]);
+  }, [swipeable, disabled, direction, swipeThreshold]);
 
   return (
     <FlipContextProvider
