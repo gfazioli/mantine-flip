@@ -44,10 +44,17 @@ Yarn workspaces monorepo with two packages:
 - Flip requires **exactly two children** (front and back) — throws at runtime otherwise.
 - `Flip.Target` requires an element child (uses `isElement`/`cloneElement`) — throws otherwise.
 - Supports both controlled (`flipped` prop) and uncontrolled (`defaultFlipped` prop) modes via `useUncontrolled`.
+- When `direction`/`directionFlipIn`/`directionFlipOut` props change at runtime, both `rotateValue` and `flipped` state are reset to keep visual and logical state in sync.
 - Rollup builds with `preserveModules`. CSS is extracted, minified, and post-processed by `scripts/prepare-css.ts` into `styles.css` and `styles.layer.css`.
 - Non-index chunks get `'use client'` banner automatically.
 - Tests use `@mantine-tests/core` + Jest with `esbuild-jest` transform.
 - Docs site uses dynamic `basePath` in production (from `package/package.json` repository field).
+
+## Known Pitfalls
+
+- **CSS fallback values**: Must NOT be quoted in `var()` — e.g. `var(--flip-perspective, 1000px)` not `'1000px'`.
+- **Sub-components in demos**: Never define child components (e.g. `FrontCard`, `BackCard`) inside a parent render function — React sees new component identity each render, causing remounts, flickering, and form state loss. Always define them at module scope.
+- **`rotateValue` accumulates**: With same-direction flip combos (`negative/negative` or `positive/positive`), the rotation value grows unbounded. This is intentional — normalizing via modulo would break CSS transition continuity.
 
 ## When Changing the Public API
 
