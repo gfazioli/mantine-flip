@@ -157,8 +157,9 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
     ...others
   } = props;
 
-  const [rotateValue, setRotateValue] = useState<number>(defaultFlipped ? -180 : 0);
-  const backMountedRef = useRef(!!defaultFlipped || !lazyBack);
+  const initialFlipped = flipped ?? defaultFlipped ?? false;
+  const [rotateValue, setRotateValue] = useState<number>(initialFlipped ? -180 : 0);
+  const backMountedRef = useRef(initialFlipped || !lazyBack);
   const rootRef = useRef<HTMLDivElement>(null);
   const touchStartRef = useRef<{ x: number; y: number } | null>(null);
 

@@ -12,8 +12,8 @@ function Demo() {
   const [disabled, setDisabled] = useState(true);
 
   return (
-    <Stack>
-      <Group>
+    <>
+      <Group mb="md">
         <Switch
           checked={disabled}
           onChange={(event) => setDisabled(event.currentTarget.checked)}
@@ -39,7 +39,7 @@ function Demo() {
           </Flip.Target>
         </Paper>
       </Flip>
-    </Stack>
+    </>
   );
 }
 `;
