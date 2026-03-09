@@ -34,6 +34,8 @@ export const FlipTarget = forwardRef<HTMLDivElement, FlipTargetProps>((props, re
       {cloneElement(children as React.ReactElement<any>, {
         onClick,
         'data-flipped': ctx.flipped ? true : undefined,
+        'data-disabled': ctx.disabled ? true : undefined,
+        'aria-disabled': ctx.disabled || undefined,
       })}
     </div>
   );

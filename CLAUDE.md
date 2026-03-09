@@ -29,6 +29,8 @@ Yarn workspaces monorepo with two packages:
 - **`package/`** — The published npm library
   - `package/src/Flip.tsx` — Main component (polymorphic factory, Mantine Styles API)
   - `package/src/FlipTarget/FlipTarget.tsx` — `Flip.Target` subcomponent (click trigger)
+  - `package/src/FlipFront/FlipFront.tsx` — `Flip.Front` compound component (explicit front face)
+  - `package/src/FlipBack/FlipBack.tsx` — `Flip.Back` compound component (explicit back face)
   - `package/src/Flip.context.ts` — React context via Mantine `createSafeContext`
   - `package/src/Flip.module.css` — CSS Modules (hashed via `hash-css-selector` with `me` prefix)
   - `package/src/index.ts` — Public exports
@@ -40,10 +42,15 @@ Yarn workspaces monorepo with two packages:
 
 - Follows **Mantine Styles API** patterns: `useProps`, `useStyles`, `createVarsResolver`, `polymorphicFactory`.
 - CSS variables: `--flip-perspective`, `--flip-transition-duration`, `--flip-transition-timing-function`.
-- Subcomponents are attached as static members: `Flip.Target = FlipTarget`.
-- Flip requires **exactly two children** (front and back) — throws at runtime otherwise.
+- Subcomponents are attached as static members: `Flip.Target`, `Flip.Front`, `Flip.Back`.
+- Two children modes: either exactly 2 raw children (backward compat) or `Flip.Front`/`Flip.Back` compound components. Mixing is not allowed.
 - `Flip.Target` requires an element child (uses `isElement`/`cloneElement`) — throws otherwise.
 - Supports both controlled (`flipped` prop) and uncontrolled (`defaultFlipped` prop) modes via `useUncontrolled`.
+- `disabled` prop blocks all flip interactions (Target clicks, toggleFlip, swipe).
+- `onTransitionEnd` callback fires when the CSS flip animation completes (filters on `propertyName === 'transform'`).
+- `lazyBack` defers rendering of the back face until first flip (uses a `useRef` flag, not state, to avoid extra re-renders).
+- `swipeable` enables touch swipe gestures; direction follows the `direction` prop. Uses native `touchstart`/`touchend` events with configurable `swipeThreshold`.
+- `easing="spring"` resolves to a CSS `linear()` spring curve. Other easing values pass through directly.
 - When `direction`/`directionFlipIn`/`directionFlipOut` props change at runtime, both `rotateValue` and `flipped` state are reset to keep visual and logical state in sync.
 - Rollup builds with `preserveModules`. CSS is extracted, minified, and post-processed by `scripts/prepare-css.ts` into `styles.css` and `styles.layer.css`.
 - Non-index chunks get `'use client'` banner automatically.

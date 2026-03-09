@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   Box,
   BoxProps,
@@ -9,8 +9,10 @@ import {
   useProps,
   useStyles,
 } from '@mantine/core';
-import { useDidUpdate, useUncontrolled } from '@mantine/hooks';
+import { useDidUpdate, useMergedRef, useUncontrolled } from '@mantine/hooks';
 import { FlipContextProvider } from './Flip.context';
+import { FlipBack } from './FlipBack/FlipBack';
+import { FlipFront } from './FlipFront/FlipFront';
 import { FlipTarget } from './FlipTarget/FlipTarget';
 import classes from './Flip.module.css';
 
@@ -36,8 +38,8 @@ export interface FlipBaseProps {
   /** Flip animation duration in seconds. Default `.8` */
   duration?: number;
 
-  /** Flip animation timing function. Default `ease-in-out` */
-  easing?: React.CSSProperties['transitionTimingFunction'];
+  /** Flip animation timing function. Accepts any CSS timing function or `"spring"` for a physics-based spring curve. Default `ease-in-out` */
+  easing?: React.CSSProperties['transitionTimingFunction'] | 'spring';
 
   /** Controlled flip opened state */
   flipped?: boolean;
@@ -63,6 +65,21 @@ export interface FlipBaseProps {
   /** Called when Flip is shown front side */
   onFront?: () => void;
 
+  /** Called when the flip transition animation ends */
+  onTransitionEnd?: () => void;
+
+  /** When true, flip is disabled and Flip.Target clicks are ignored. Default `false` */
+  disabled?: boolean;
+
+  /** When true, the back face is not rendered until the first flip. Default `false` */
+  lazyBack?: boolean;
+
+  /** When true, enables swipe gestures to trigger flip on touch devices. Swipe direction follows the `direction` prop. Default `false` */
+  swipeable?: boolean;
+
+  /** Minimum swipe distance in pixels to trigger a flip. Default `50` */
+  swipeThreshold?: number;
+
   children?: React.ReactNode;
 }
 
@@ -76,6 +93,8 @@ export type FlipFactory = PolymorphicFactory<{
   vars: FlipCssVariables;
   staticComponents: {
     Target: typeof FlipTarget;
+    Front: typeof FlipFront;
+    Back: typeof FlipBack;
   };
 }>;
 
@@ -85,11 +104,24 @@ const defaultProps: Partial<FlipProps> = {
   directionFlipOut: 'positive',
 };
 
+const SPRING_EASING =
+  'linear(0, 0.009, 0.035 2.1%, 0.141 4.4%, 0.723 12.9%, 0.938 16.7%, 1.017, 1.077 21.8%, 1.121 24%, 1.149 26.3%, 1.159, 1.163 29%, 1.154 31.4%, 1.075 38.5%, 1.033 42.7%, 1.001 48%, 0.985 52.2%, 0.98 56.3%, 0.984 64.3%, 1 100%)';
+
+const resolveEasing = (easing: string | undefined): string => {
+  if (easing === undefined) {
+    return 'ease-in-out';
+  }
+  if (easing === 'spring') {
+    return SPRING_EASING;
+  }
+  return easing;
+};
+
 const varsResolver = createVarsResolver<FlipFactory>((_, { perspective, easing, duration }) => ({
   root: {
     '--flip-perspective': perspective === undefined ? '1000px' : perspective,
     '--flip-transition-duration': duration === undefined ? '.8s' : `${duration}s`,
-    '--flip-transition-timing-function': easing === undefined ? 'ease-in-out' : easing,
+    '--flip-transition-timing-function': resolveEasing(easing),
   },
   'flip-container': {},
   'flip-front-face': {},
@@ -117,10 +149,18 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
     onChange,
     onBack,
     onFront,
+    onTransitionEnd,
+    disabled,
+    lazyBack,
+    swipeable,
+    swipeThreshold,
     ...others
   } = props;
 
   const [rotateValue, setRotateValue] = useState<number>(defaultFlipped ? -180 : 0);
+  const backMountedRef = useRef(!!defaultFlipped || !lazyBack);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const touchStartRef = useRef<{ x: number; y: number } | null>(null);
 
   const [_flipped, setFlipped] = useUncontrolled({
     value: flipped,
@@ -141,6 +181,12 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
     vars,
     varsResolver,
   });
+
+  useDidUpdate(() => {
+    if (_flipped) {
+      backMountedRef.current = true;
+    }
+  }, [_flipped]);
 
   useDidUpdate(() => {
     setRotateValue(0);
@@ -167,9 +213,31 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
 
   const childrenArray = React.Children.toArray(children);
 
-  if (childrenArray.length !== 2) {
-    throw new Error('Flip component must have exactly two children');
+  // Detect compound component usage (Flip.Front / Flip.Back)
+  const compoundFront = childrenArray.find(
+    (child) => React.isValidElement(child) && (child.type as any)?.displayName === 'FlipFront'
+  ) as React.ReactElement<{ children: React.ReactNode }> | undefined;
+
+  const compoundBack = childrenArray.find(
+    (child) => React.isValidElement(child) && (child.type as any)?.displayName === 'FlipBack'
+  ) as React.ReactElement<{ children: React.ReactNode }> | undefined;
+
+  const isCompound = !!(compoundFront || compoundBack);
+
+  if (isCompound) {
+    if (!compoundFront || !compoundBack) {
+      throw new Error(
+        'Flip component requires both Flip.Front and Flip.Back when using compound components'
+      );
+    }
+  } else if (childrenArray.length !== 2) {
+    throw new Error(
+      'Flip component must have exactly two children, or use Flip.Front and Flip.Back'
+    );
   }
+
+  const frontChild = isCompound ? compoundFront!.props.children : childrenArray[0];
+  const backChild = isCompound ? compoundBack!.props.children : childrenArray[1];
 
   const getDirectionIn = useMemo(() => {
     if (direction === 'horizontal') {
@@ -185,33 +253,107 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
     return { transform: 'rotateX(180deg)' };
   }, [direction]);
 
-  // get the first child from children
-  const frontChild = childrenArray[0] as React.ReactElement;
-  const backChild = childrenArray[1] as React.ReactElement;
-
   const front = () => {
     setFlipped(false);
-    _flipped && onFront?.();
+    if (_flipped) {
+      onFront?.();
+    }
   };
 
   const back = () => {
+    backMountedRef.current = true;
     setFlipped(true);
-    !_flipped && onBack?.();
+    if (!_flipped) {
+      onBack?.();
+    }
   };
 
-  const toggleFlip = () => (_flipped ? front() : back());
+  const toggleFlip = useCallback(() => {
+    if (disabled) {
+      return;
+    }
+    if (_flipped) {
+      front();
+    } else {
+      back();
+    }
+  }, [disabled, _flipped]);
+
+  const handleTransitionEnd = useCallback(
+    (event: React.TransitionEvent<HTMLDivElement>) => {
+      if (event.propertyName === 'transform') {
+        onTransitionEnd?.();
+      }
+    },
+    [onTransitionEnd]
+  );
+
+  // Swipe gesture support
+  useEffect(() => {
+    if (!swipeable || disabled) {
+      return undefined;
+    }
+
+    const el = rootRef.current;
+    if (!el) {
+      return undefined;
+    }
+
+    const threshold = swipeThreshold ?? 50;
+
+    const handleTouchStart = (e: TouchEvent) => {
+      const touch = e.touches[0];
+      touchStartRef.current = { x: touch.clientX, y: touch.clientY };
+    };
+
+    const handleTouchEnd = (e: TouchEvent) => {
+      if (!touchStartRef.current) {
+        return;
+      }
+      const touch = e.changedTouches[0];
+      const dx = touch.clientX - touchStartRef.current.x;
+      const dy = touch.clientY - touchStartRef.current.y;
+      touchStartRef.current = null;
+
+      if (direction === 'horizontal' && Math.abs(dx) > threshold && Math.abs(dx) > Math.abs(dy)) {
+        toggleFlip();
+      } else if (
+        direction === 'vertical' &&
+        Math.abs(dy) > threshold &&
+        Math.abs(dy) > Math.abs(dx)
+      ) {
+        toggleFlip();
+      }
+    };
+
+    el.addEventListener('touchstart', handleTouchStart, { passive: true });
+    el.addEventListener('touchend', handleTouchEnd, { passive: true });
+
+    return () => {
+      el.removeEventListener('touchstart', handleTouchStart);
+      el.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, [swipeable, disabled, direction, swipeThreshold, toggleFlip]);
 
   return (
     <FlipContextProvider
       value={{
         toggleFlip,
         flipped: _flipped,
+        disabled: !!disabled,
       }}
     >
-      <Box ref={ref} {...getStyles('root')} {...others}>
-        <div {...getStyles('flip-container', { style: getDirectionIn })}>
-          <div {...getStyles('flip-front-face', { style: { zIndex: 0 } })}>{frontChild}</div>
-          <div {...getStyles('flip-back-face', { style: getBackRotation })}>{backChild}</div>
+      <Box ref={useMergedRef(ref, rootRef)} {...getStyles('root')} aria-live="polite" {...others}>
+        <div
+          {...getStyles('flip-container', { style: getDirectionIn })}
+          onTransitionEnd={handleTransitionEnd}
+        >
+          <div {...getStyles('flip-front-face', { style: { zIndex: 0 } })} aria-hidden={_flipped}>
+            {frontChild}
+          </div>
+          <div {...getStyles('flip-back-face', { style: getBackRotation })} aria-hidden={!_flipped}>
+            {backMountedRef.current ? backChild : null}
+          </div>
         </div>
       </Box>
     </FlipContextProvider>
@@ -221,3 +363,5 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
 Flip.classes = classes;
 Flip.displayName = 'Flip';
 Flip.Target = FlipTarget;
+Flip.Front = FlipFront;
+Flip.Back = FlipBack;

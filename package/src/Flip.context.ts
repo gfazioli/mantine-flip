@@ -4,6 +4,7 @@ import { FLIP_ERRORS } from './Flip.errors';
 interface FlipContext {
   toggleFlip: () => void;
   flipped: boolean;
+  disabled: boolean;
 }
 
 export const [FlipContextProvider, useFlipContext] = createSafeContext<FlipContext>(

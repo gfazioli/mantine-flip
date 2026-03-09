@@ -4,7 +4,8 @@
       "Bash(yarn jest:*)",
       "Bash(yarn build:*)",
       "Bash(npx storybook:*)",
-      "Bash(yarn docs:build:*)"
+      "Bash(yarn docs:build:*)",
+      "Bash(yarn test:*)"
     ]
   }
 }
