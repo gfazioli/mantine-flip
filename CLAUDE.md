@@ -51,6 +51,7 @@ Yarn workspaces monorepo with two packages:
 - `lazyBack` defers rendering of the back face until first flip (uses a `useRef` flag, not state, to avoid extra re-renders).
 - `swipeable` enables touch swipe gestures; direction follows the `direction` prop. Uses native `touchstart`/`touchend` events with configurable `swipeThreshold`.
 - `easing="spring"` resolves to a CSS `linear()` spring curve. Other easing values pass through directly.
+- Accessibility: root has `aria-live="polite"`, each face gets `aria-hidden` toggled based on `_flipped` state, and `Flip.Target` adds `data-disabled`/`aria-disabled` when disabled.
 - When `direction`/`directionFlipIn`/`directionFlipOut` props change at runtime, both `rotateValue` and `flipped` state are reset to keep visual and logical state in sync.
 - Rollup builds with `preserveModules`. CSS is extracted, minified, and post-processed by `scripts/prepare-css.ts` into `styles.css` and `styles.layer.css`.
 - Non-index chunks get `'use client'` banner automatically.
