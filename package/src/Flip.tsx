@@ -183,6 +183,8 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
     varsResolver,
   });
 
+  const directionResetRef = useRef(false);
+
   useDidUpdate(() => {
     if (_flipped) {
       backMountedRef.current = true;
@@ -190,11 +192,19 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
   }, [_flipped]);
 
   useDidUpdate(() => {
+    if (_flipped) {
+      directionResetRef.current = true;
+    }
     setRotateValue(0);
     setFlipped(false);
   }, [directionFlipIn, directionFlipOut, direction]);
 
   useDidUpdate(() => {
+    if (directionResetRef.current) {
+      directionResetRef.current = false;
+      return;
+    }
+
     if (directionFlipIn === 'negative' && directionFlipOut === 'positive') {
       setRotateValue((v) => (v ? v + 180 : -180));
     }
