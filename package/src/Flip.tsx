@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import {
   Box,
   BoxProps,
@@ -120,8 +120,6 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
     ...others
   } = props;
 
-  const containerRef = useRef(null);
-
   const [rotateValue, setRotateValue] = useState<number>(defaultFlipped ? -180 : 0);
 
   const [_flipped, setFlipped] = useUncontrolled({
@@ -211,7 +209,7 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
       }}
     >
       <Box ref={ref} {...getStyles('root')} {...others}>
-        <div ref={containerRef} {...getStyles('flip-container', { style: getDirectionIn })}>
+        <div {...getStyles('flip-container', { style: getDirectionIn })}>
           <div {...getStyles('flip-front-face', { style: { zIndex: 0 } })}>{frontChild}</div>
           <div {...getStyles('flip-back-face', { style: getBackRotation })}>{backChild}</div>
         </div>

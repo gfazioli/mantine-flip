@@ -7,4 +7,5 @@ export type {
   FlipIn,
   FlipOut,
 } from './Flip';
+export type { FlipTargetProps } from './FlipTarget/FlipTarget';
 export { useFlipContext } from './Flip.context';
