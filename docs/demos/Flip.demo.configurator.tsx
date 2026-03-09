@@ -73,7 +73,7 @@ function Wrapper(props: any) {
 }
 
 const code = `
-import { Flip } from '@gfazioli/mantine-flip'';
+import { Flip } from '@gfazioli/mantine-flip';
 
 function Demo() {
   return (

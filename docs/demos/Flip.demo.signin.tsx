@@ -72,7 +72,7 @@ function Demo() {
         </Text>
       }
       
-      <Flip h={200} w={400} flipped={flipped} mt={30}>
+      <Flip h={300} w={400} flipped={flipped} mt={30}>
         <SignIn />
         <SignUp />
       </Flip>
@@ -138,7 +138,7 @@ function Demo() {
         </Text>
       )}
 
-      <Flip h={200} w={400} flipped={flipped} mt={30}>
+      <Flip h={300} w={400} flipped={flipped} mt={30}>
         <SignIn />
         <SignUp />
       </Flip>
