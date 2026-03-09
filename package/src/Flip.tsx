@@ -146,6 +146,7 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
 
   useDidUpdate(() => {
     setRotateValue(0);
+    setFlipped(false);
   }, [directionFlipIn, directionFlipOut, direction]);
 
   useDidUpdate(() => {

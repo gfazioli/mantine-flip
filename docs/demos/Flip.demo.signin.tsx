@@ -82,39 +82,39 @@ function Demo() {
 }
 `;
 
+function SignIn() {
+  return (
+    <Paper withBorder shadow="md" p={30} radius="md">
+      <TextInput label="Email" placeholder="you@mantine.dev" required />
+      <PasswordInput label="Password" placeholder="Your password" required mt="md" />
+      <Group justify="space-between" mt="lg">
+        <Checkbox label="Remember me" />
+        <Anchor component="button" size="sm">
+          Forgot password?
+        </Anchor>
+      </Group>
+      <Button fullWidth mt="xl">
+        Sign in
+      </Button>
+    </Paper>
+  );
+}
+
+function SignUp() {
+  return (
+    <Paper withBorder shadow="md" p={30} radius="md">
+      <TextInput label="Email" placeholder="you@mantine.dev" required />
+      <PasswordInput label="Password" placeholder="Your password" required mt="md" />
+      <PasswordInput label="Confirm Password" placeholder="Your password" required mt="md" />
+      <Button fullWidth mt="xl">
+        Sign Up
+      </Button>
+    </Paper>
+  );
+}
+
 function Demo() {
   const [flipped, setFlipped] = useState(false);
-
-  function SignIn() {
-    return (
-      <Paper withBorder shadow="md" p={30} radius="md">
-        <TextInput label="Email" placeholder="you@mantine.dev" required />
-        <PasswordInput label="Password" placeholder="Your password" required mt="md" />
-        <Group justify="space-between" mt="lg">
-          <Checkbox label="Remember me" />
-          <Anchor component="button" size="sm">
-            Forgot password?
-          </Anchor>
-        </Group>
-        <Button fullWidth mt="xl">
-          Sign in
-        </Button>
-      </Paper>
-    );
-  }
-
-  function SignUp() {
-    return (
-      <Paper withBorder shadow="md" p={30} radius="md">
-        <TextInput label="Email" placeholder="you@mantine.dev" required />
-        <PasswordInput label="Password" placeholder="Your password" required mt="md" />
-        <PasswordInput label="Confirm Password" placeholder="Your password" required mt="md" />
-        <Button fullWidth mt="xl">
-          Sign Up
-        </Button>
-      </Paper>
-    );
-  }
 
   return (
     <Container size={420} my={40}>
