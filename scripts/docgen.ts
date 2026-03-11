@@ -5,7 +5,12 @@ const getComponentPath = (componentPath: string) =>
   path.join(process.cwd(), 'package/src', componentPath);
 
 generateDeclarations({
-  componentsPaths: [getComponentPath('Flip.tsx')],
+  componentsPaths: [
+    getComponentPath('Flip.tsx'),
+    getComponentPath('FlipTarget/FlipTarget.tsx'),
+    getComponentPath('FlipFront/FlipFront.tsx'),
+    getComponentPath('FlipBack/FlipBack.tsx'),
+  ],
   tsConfigPath: path.join(process.cwd(), 'tsconfig.json'),
   outputPath: path.join(process.cwd(), 'docs'),
 });

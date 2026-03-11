@@ -12,7 +12,7 @@ export default function HomePage() {
       <PageHeader data={PACKAGE_DATA} />
       <DocsTabs
         docgen={docgen}
-        componentsProps={['Flip']}
+        componentsProps={['Flip', 'FlipTarget', 'FlipFront', 'FlipBack']}
         componentsStyles={['Flip']}
         componentPrefix="Flip"
         stylesApiData={STYLES_API_DATA}
