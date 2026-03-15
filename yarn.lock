@@ -2569,12 +2569,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/hooks@npm:8.3.16":
-  version: 8.3.16
-  resolution: "@mantine/hooks@npm:8.3.16"
+"@mantine/hooks@npm:8.3.17":
+  version: 8.3.17
+  resolution: "@mantine/hooks@npm:8.3.17"
   peerDependencies:
     react: ^18.x || ^19.x
-  checksum: 10c0/2457a5aac1b614470691e0f5c57336d439ed10da3c18c85c05362c7f55398cb2bf97c7d3dfc477e01af94eb3ad7f0de5b9ad29f674de906fe417b453d06b63d8
+  checksum: 10c0/5c19343b3f7fe0b9231a8eb2882bdfeafef391b779a65d6ef071ce2bb124ac58d5871930528dd8d292a01e855c4b158befd6375c5294306692ed691e47872f5e
   languageName: node
   linkType: hard
 
@@ -7708,7 +7708,7 @@ __metadata:
     "@mantine/code-highlight": "npm:8.3.16"
     "@mantine/core": "npm:8.3.16"
     "@mantine/dates": "npm:8.3.16"
-    "@mantine/hooks": "npm:8.3.16"
+    "@mantine/hooks": "npm:8.3.17"
     "@mantinex/demo": "npm:^2.0.0"
     "@mantinex/dev-icons": "npm:^2.0.0"
     "@mantinex/mantine-header": "npm:^2.0.0"
@@ -10961,7 +10961,7 @@ __metadata:
     "@ianvs/prettier-plugin-sort-imports": "npm:^4.7.1"
     "@mantine-tests/core": "npm:^2.1.0"
     "@mantine/core": "npm:8.3.16"
-    "@mantine/hooks": "npm:8.3.16"
+    "@mantine/hooks": "npm:8.3.17"
     "@rollup/plugin-node-resolve": "npm:^16.0.3"
     "@rollup/plugin-replace": "npm:^6.0.3"
     "@storybook/addon-essentials": "npm:^8.6.18"
