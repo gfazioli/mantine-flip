@@ -2554,18 +2554,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/dates@npm:8.3.17":
-  version: 8.3.17
-  resolution: "@mantine/dates@npm:8.3.17"
+"@mantine/dates@npm:8.3.18":
+  version: 8.3.18
+  resolution: "@mantine/dates@npm:8.3.18"
   dependencies:
     clsx: "npm:^2.1.1"
   peerDependencies:
-    "@mantine/core": 8.3.17
-    "@mantine/hooks": 8.3.17
+    "@mantine/core": 8.3.18
+    "@mantine/hooks": 8.3.18
     dayjs: ">=1.0.0"
     react: ^18.x || ^19.x
     react-dom: ^18.x || ^19.x
-  checksum: 10c0/5dce928b963a35635327b5a025c1dcae72816556c799091b9902a606134f2e04e8d798db3a7a8ab24578205374b21966728d8246f2ec5b1ea408185c82b0521d
+  checksum: 10c0/13926abde2b03415eef661897bbb4a3d14ef2ca31598e11c11d0c683af76399910bdc2d9c531fd63b3a115d7e594bbdd9b5b9f88770742584643842456a1801e
   languageName: node
   linkType: hard
 
@@ -7707,7 +7707,7 @@ __metadata:
     "@gfazioli/mantine-flip": "workspace:*"
     "@mantine/code-highlight": "npm:8.3.17"
     "@mantine/core": "npm:8.3.17"
-    "@mantine/dates": "npm:8.3.17"
+    "@mantine/dates": "npm:8.3.18"
     "@mantine/hooks": "npm:8.3.17"
     "@mantinex/demo": "npm:^2.0.0"
     "@mantinex/dev-icons": "npm:^2.0.0"
