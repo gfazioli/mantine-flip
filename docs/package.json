@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@gfazioli/mantine-flip": "workspace:*",
-    "@mantine/code-highlight": "8.3.17",
+    "@mantine/code-highlight": "8.3.18",
     "@mantine/core": "8.3.17",
     "@mantine/dates": "8.3.17",
     "@mantine/hooks": "8.3.17",
