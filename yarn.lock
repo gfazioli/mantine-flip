@@ -2536,9 +2536,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/core@npm:8.3.17":
-  version: 8.3.17
-  resolution: "@mantine/core@npm:8.3.17"
+"@mantine/core@npm:8.3.18":
+  version: 8.3.18
+  resolution: "@mantine/core@npm:8.3.18"
   dependencies:
     "@floating-ui/react": "npm:^0.27.16"
     clsx: "npm:^2.1.1"
@@ -2547,10 +2547,10 @@ __metadata:
     react-textarea-autosize: "npm:8.5.9"
     type-fest: "npm:^4.41.0"
   peerDependencies:
-    "@mantine/hooks": 8.3.17
+    "@mantine/hooks": 8.3.18
     react: ^18.x || ^19.x
     react-dom: ^18.x || ^19.x
-  checksum: 10c0/30d589d769f5116da841d3b0c029db2467115efffcc29012961775f3e89ae3633971f3ed14f4c44a7a90478302ed5d6d8e4f898604f63944dbc984d283e91533
+  checksum: 10c0/5597038b0a465bc7c4d5f886e300f1b4637043cd25b5383013a8f65d0aaa12eee5c13eded619c9e45542f42681a22189f7bc7deacfa0eedc918f0e8e56e9387f
   languageName: node
   linkType: hard
 
@@ -7706,7 +7706,7 @@ __metadata:
   dependencies:
     "@gfazioli/mantine-flip": "workspace:*"
     "@mantine/code-highlight": "npm:8.3.17"
-    "@mantine/core": "npm:8.3.17"
+    "@mantine/core": "npm:8.3.18"
     "@mantine/dates": "npm:8.3.17"
     "@mantine/hooks": "npm:8.3.17"
     "@mantinex/demo": "npm:^2.0.0"
@@ -10960,7 +10960,7 @@ __metadata:
     "@eslint/js": "npm:^9.39.4"
     "@ianvs/prettier-plugin-sort-imports": "npm:^4.7.1"
     "@mantine-tests/core": "npm:^2.1.0"
-    "@mantine/core": "npm:8.3.17"
+    "@mantine/core": "npm:8.3.18"
     "@mantine/hooks": "npm:8.3.17"
     "@rollup/plugin-node-resolve": "npm:^16.0.3"
     "@rollup/plugin-replace": "npm:^6.0.3"
