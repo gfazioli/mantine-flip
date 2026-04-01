@@ -1,4 +1,4 @@
-import React, { cloneElement, forwardRef } from 'react';
+import React, { cloneElement } from 'react';
 import { createEventHandler, isElement, useProps } from '@mantine/core';
 import { useFlipContext } from '../Flip.context';
 
@@ -14,7 +14,7 @@ const defaultProps: Partial<FlipTargetProps> = {
   refProp: 'ref',
 };
 
-export const FlipTarget = forwardRef<HTMLDivElement, FlipTargetProps>((props, ref) => {
+export function FlipTarget(props: FlipTargetProps) {
   const { children, refProp, ...others } = useProps('FlipTarget', defaultProps, props);
 
   if (!isElement(children)) {
@@ -30,7 +30,7 @@ export const FlipTarget = forwardRef<HTMLDivElement, FlipTargetProps>((props, re
   );
 
   return (
-    <div ref={ref} {...others}>
+    <div {...others}>
       {cloneElement(children as React.ReactElement<any>, {
         onClick,
         'data-flipped': ctx.flipped ? true : undefined,
@@ -39,6 +39,6 @@ export const FlipTarget = forwardRef<HTMLDivElement, FlipTargetProps>((props, re
       })}
     </div>
   );
-});
+}
 
 FlipTarget.displayName = 'FlipTarget';

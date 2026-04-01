@@ -128,8 +128,9 @@ const varsResolver = createVarsResolver<FlipFactory>((_, { perspective, easing, 
   'flip-back-face': {},
 }));
 
-export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
-  const props = useProps('Flip', defaultProps, _props);
+export const Flip = polymorphicFactory<FlipFactory>((_props) => {
+  const { ref, ...restProps } = _props as typeof _props & { ref?: React.Ref<HTMLDivElement> };
+  const props = useProps('Flip', defaultProps, restProps);
   const {
     perspective,
     duration,

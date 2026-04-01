@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import { useProps } from '@mantine/core';
 
 export interface FlipFrontProps {
@@ -6,9 +6,9 @@ export interface FlipFrontProps {
   children: React.ReactNode;
 }
 
-export const FlipFront = forwardRef<HTMLDivElement, FlipFrontProps>((props, ref) => {
+export function FlipFront(props: FlipFrontProps) {
   const { children } = useProps('FlipFront', {}, props);
-  return <div ref={ref}>{children}</div>;
-});
+  return <div>{children}</div>;
+}
 
 FlipFront.displayName = 'FlipFront';

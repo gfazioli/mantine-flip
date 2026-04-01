@@ -18,6 +18,7 @@
 ## Overview
 
 This component is created on top of the [Mantine](https://mantine.dev/) library.
+It requires **Mantine 9.x** and **React 19**.
 
 [Mantine Flip](https://gfazioli.github.io/mantine-flip/) is a two-face container that animates between a front and a back view, ideal for compact UIs that need progressive disclosure (e.g., editing panels, settings, sign-in/sign-up toggles, or profile details). It supports both uncontrolled usage with Flip.Target to wire any element as a click trigger, and controlled usage via flipped/defaultFlipped using React state for full synchronization with your app logic. The component enforces exactly two children, accepts size constraints (w/h), and offers transition customization such as vertical flipping and distinct rotation directions for flip-in and flip-out. Styling hooks (classNames/Styles API) let you target inner parts for design refinement, while examples demonstrate practical patterns like credit-card editing, modal-like settings panes, and multi-target triggers within a single face.
 
