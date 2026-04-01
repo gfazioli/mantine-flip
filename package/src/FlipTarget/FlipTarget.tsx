@@ -15,7 +15,7 @@ const defaultProps: Partial<FlipTargetProps> = {
 };
 
 export function FlipTarget(props: FlipTargetProps) {
-  const { children, refProp, ...others } = useProps('FlipTarget', defaultProps, props);
+  const { children, refProp: _refProp, ...others } = useProps('FlipTarget', defaultProps, props);
 
   if (!isElement(children)) {
     throw new Error(
