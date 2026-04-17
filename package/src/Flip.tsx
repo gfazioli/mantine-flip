@@ -236,11 +236,15 @@ export const Flip = polymorphicFactory<FlipFactory>((_props) => {
 
   // Detect compound component usage (Flip.Front / Flip.Back)
   const compoundFront = childrenArray.find(
-    (child) => React.isValidElement(child) && (child.type as any)?.displayName === 'FlipFront'
+    (child) =>
+      React.isValidElement(child) &&
+      (child.type as { displayName?: string })?.displayName === 'FlipFront'
   ) as React.ReactElement<{ children: React.ReactNode }> | undefined;
 
   const compoundBack = childrenArray.find(
-    (child) => React.isValidElement(child) && (child.type as any)?.displayName === 'FlipBack'
+    (child) =>
+      React.isValidElement(child) &&
+      (child.type as { displayName?: string })?.displayName === 'FlipBack'
   ) as React.ReactElement<{ children: React.ReactNode }> | undefined;
 
   const isCompound = !!(compoundFront || compoundBack);
@@ -265,14 +269,14 @@ export const Flip = polymorphicFactory<FlipFactory>((_props) => {
   const frontChild = isCompound ? compoundFront!.props.children : childrenArray[0];
   const backChild = isCompound ? compoundBack!.props.children : childrenArray[1];
 
-  const getDirectionIn = useMemo(() => {
+  const directionInStyle = useMemo(() => {
     if (direction === 'horizontal') {
       return { transform: `rotateY(${rotateValue}deg)` };
     }
     return { transform: `rotateX(${rotateValue}deg)` };
   }, [direction, rotateValue]);
 
-  const getBackRotation = useMemo(() => {
+  const backRotationStyle = useMemo(() => {
     if (direction === 'horizontal') {
       return { transform: 'rotateY(180deg)' };
     }
@@ -291,10 +295,12 @@ export const Flip = polymorphicFactory<FlipFactory>((_props) => {
       setFlipped(true);
       onBack?.();
     }
-  }, [disabled, _flipped, onFront, onBack]);
+  }, [disabled, _flipped, onFront, onBack, setFlipped]);
 
-  // Keep a stable ref to toggleFlip so swipe useEffect doesn't rebind on every flip
-  toggleFlipRef.current = toggleFlip;
+  // Keep swipe listeners pointing at the latest toggleFlip without re-binding on every flip
+  useEffect(() => {
+    toggleFlipRef.current = toggleFlip;
+  }, [toggleFlip]);
 
   const handleTransitionEnd = useCallback(
     (event: React.TransitionEvent<HTMLDivElement>) => {
@@ -362,7 +368,7 @@ export const Flip = polymorphicFactory<FlipFactory>((_props) => {
     >
       <Box ref={useMergedRef(ref, rootRef)} {...getStyles('root')} aria-live="polite" {...others}>
         <div
-          {...getStyles('flip-container', { style: getDirectionIn })}
+          {...getStyles('flip-container', { style: directionInStyle })}
           onTransitionEnd={handleTransitionEnd}
         >
           <div
@@ -372,7 +378,7 @@ export const Flip = polymorphicFactory<FlipFactory>((_props) => {
             {frontChild}
           </div>
           <div
-            {...getStyles('flip-back-face', { style: getBackRotation })}
+            {...getStyles('flip-back-face', { style: backRotationStyle })}
             inert={!_flipped || undefined}
           >
             {backMountedRef.current ? backChild : null}
