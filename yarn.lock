@@ -12609,8 +12609,8 @@ __metadata:
   linkType: hard
 
 "storybook@npm:^10.3.5":
-  version: 10.3.5
-  resolution: "storybook@npm:10.3.5"
+  version: 10.3.6
+  resolution: "storybook@npm:10.3.6"
   dependencies:
     "@storybook/global": "npm:^5.0.0"
     "@storybook/icons": "npm:^2.0.1"
@@ -12627,12 +12627,15 @@ __metadata:
     ws: "npm:^8.18.0"
   peerDependencies:
     prettier: ^2 || ^3
+    vite-plus: ^0.1.15
   peerDependenciesMeta:
     prettier:
       optional: true
+    vite-plus:
+      optional: true
   bin:
     storybook: ./dist/bin/dispatcher.js
-  checksum: 10c0/1443e4710b0bb972db7704d8445c039a6335afafebe853d2b0d89b161262050cd7ae5eda3811c771d54d832f0acc80cf2c231d24f73d1f547d020898394afde6
+  checksum: 10c0/ee6702667459ba2d49269ddd63a7281f17816fcdd4bacd338ed47a4a8e7ad65760c90d99f6b2dfdfd0a564bcfcab3c1ea05b50bf3aafc6b5b19a039a5da77870
   languageName: node
   linkType: hard
 
