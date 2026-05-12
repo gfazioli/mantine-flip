@@ -19,7 +19,7 @@ function extractChangelogBody(changelogPath: string): string {
   }
 
   const raw = fs.readFileSync(changelogPath, 'utf8');
-  const cutIdx = raw.search(/^##\s+Discord\s+Summary\b/m);
+  const cutIdx = raw.search(/^##.*?\bDiscord\s+Summary\b/m);
   const upToCut = cutIdx >= 0 ? raw.slice(0, cutIdx) : raw;
 
   const lines = upToCut.split('\n');
