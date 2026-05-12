@@ -3,7 +3,7 @@ import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
 
 export const parameters = {
-  layout: 'centered',
+  layout: 'padded',
 };
 
 export const globalTypes = {
