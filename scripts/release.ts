@@ -19,15 +19,15 @@ function extractChangelogBody(changelogPath: string): string {
   }
 
   const raw = fs.readFileSync(changelogPath, 'utf8');
-  const summaryIdx = raw.search(/^##\s+Summary\b/m);
-  const upToSummary = summaryIdx >= 0 ? raw.slice(0, summaryIdx) : raw;
+  const cutIdx = raw.search(/^##\s+Discord\s+Summary\b/m);
+  const upToCut = cutIdx >= 0 ? raw.slice(0, cutIdx) : raw;
 
-  const lines = upToSummary.split('\n');
+  const lines = upToCut.split('\n');
   const firstSectionIdx = lines.findIndex((line) => /^##\s+/.test(line));
 
   if (firstSectionIdx < 0) {
     signale.error(
-      `${chalk.cyan('CHANGELOG.md')} has no content sections (\`## …\`) before \`## Summary\`. Regenerate it.`
+      `${chalk.cyan('CHANGELOG.md')} has no content sections (\`## …\`) before \`## Discord Summary\`. Regenerate it.`
     );
     process.exit(1);
   }
