@@ -32,7 +32,12 @@ function extractChangelogBody(changelogPath: string): string {
     process.exit(1);
   }
 
-  return lines.slice(firstSectionIdx).join('\n').trim();
+  let endIdx = lines.length;
+  while (endIdx > firstSectionIdx && /^(\s*|-{3,}\s*)$/.test(lines[endIdx - 1])) {
+    endIdx--;
+  }
+
+  return lines.slice(firstSectionIdx, endIdx).join('\n').trim();
 }
 
 async function generateGitHubAutoNotes(
