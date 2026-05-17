@@ -2422,17 +2422,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/code-highlight@npm:9.2.0":
-  version: 9.2.0
-  resolution: "@mantine/code-highlight@npm:9.2.0"
+"@mantine/code-highlight@npm:9.2.1":
+  version: 9.2.1
+  resolution: "@mantine/code-highlight@npm:9.2.1"
   dependencies:
     clsx: "npm:^2.1.1"
   peerDependencies:
-    "@mantine/core": 9.2.0
-    "@mantine/hooks": 9.2.0
+    "@mantine/core": 9.2.1
+    "@mantine/hooks": 9.2.1
     react: ^19.2.0
     react-dom: ^19.2.0
-  checksum: 10c0/7fc408ce5b85c5f4aad9f08b999feac0dc5564e68e92add977dc7a6ff3aed793c05fd8772f3495d141bfa4d253a94dfaae2f81c30c69b8604073443f5e2e8624
+  checksum: 10c0/bf9dcf3fd6a4d365b3940bda2065179397a775c6e8078b2c6538a262974c6aa1e2366ed907d16dbfd179759bd25227ee09d0c80f55f2ec3dfd750044902c79d8
   languageName: node
   linkType: hard
 
@@ -6594,7 +6594,7 @@ __metadata:
   resolution: "extension-template-docs@workspace:docs"
   dependencies:
     "@gfazioli/mantine-flip": "workspace:*"
-    "@mantine/code-highlight": "npm:9.2.0"
+    "@mantine/code-highlight": "npm:9.2.1"
     "@mantine/core": "npm:9.2.0"
     "@mantine/dates": "npm:9.2.0"
     "@mantine/hooks": "npm:9.2.0"
