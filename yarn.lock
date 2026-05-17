@@ -2436,9 +2436,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/core@npm:9.2.0":
-  version: 9.2.0
-  resolution: "@mantine/core@npm:9.2.0"
+"@mantine/core@npm:9.2.1":
+  version: 9.2.1
+  resolution: "@mantine/core@npm:9.2.1"
   dependencies:
     "@floating-ui/react": "npm:^0.27.19"
     clsx: "npm:^2.1.1"
@@ -2446,10 +2446,10 @@ __metadata:
     react-remove-scroll: "npm:^2.7.2"
     type-fest: "npm:^5.6.0"
   peerDependencies:
-    "@mantine/hooks": 9.2.0
+    "@mantine/hooks": 9.2.1
     react: ^19.2.0
     react-dom: ^19.2.0
-  checksum: 10c0/b2e71712621683b0c6d1351ebb49cf5d26278aa837631ef80f10426fe4a9b72cde61d040e6123f01039e64415b5fa085a5092960b5bd828450423c99a4604327
+  checksum: 10c0/998f9da4463119e62b8031f577e3a4da0082f56a8b516576e5f123a4bba96c1a35007419cd8ee99d7a6f695eba49842b807c8ea704bbb178300808434286ac55
   languageName: node
   linkType: hard
 
@@ -6595,7 +6595,7 @@ __metadata:
   dependencies:
     "@gfazioli/mantine-flip": "workspace:*"
     "@mantine/code-highlight": "npm:9.2.0"
-    "@mantine/core": "npm:9.2.0"
+    "@mantine/core": "npm:9.2.1"
     "@mantine/dates": "npm:9.2.0"
     "@mantine/hooks": "npm:9.2.0"
     "@mantinex/demo": "npm:^2.0.0"
@@ -8923,7 +8923,7 @@ __metadata:
   resolution: "m-90d2bb8@workspace:."
   dependencies:
     "@mantine-tests/core": "npm:^2.1.0"
-    "@mantine/core": "npm:9.2.0"
+    "@mantine/core": "npm:9.2.1"
     "@mantine/hooks": "npm:9.2.0"
     "@rollup/plugin-node-resolve": "npm:^16.0.3"
     "@rollup/plugin-replace": "npm:^6.0.3"
