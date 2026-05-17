@@ -1,7 +1,7 @@
 import { Flip } from '@gfazioli/mantine-flip';
-import { IconArrowRight } from '@tabler/icons-react';
 import { Badge, Button, Card, Flex, Image, SimpleGrid, Stack, Text, Title } from '@mantine/core';
 import { MantineDemo } from '@mantinex/demo';
+import { IconArrowRight } from '@tabler/icons-react';
 
 const code = `
 import { Flip } from '@gfazioli/mantine-flip';

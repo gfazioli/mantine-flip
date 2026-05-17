@@ -1,4 +1,3 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   Box,
   BoxProps,
@@ -10,6 +9,7 @@ import {
   useStyles,
 } from '@mantine/core';
 import { useDidUpdate, useMergedRef, useUncontrolled } from '@mantine/hooks';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { FlipContextProvider } from './Flip.context';
 import { FlipBack } from './FlipBack/FlipBack';
 import { FlipFront } from './FlipFront/FlipFront';

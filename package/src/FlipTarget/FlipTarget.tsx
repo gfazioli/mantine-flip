@@ -1,5 +1,5 @@
-import React, { cloneElement } from 'react';
 import { createEventHandler, isElement, useProps } from '@mantine/core';
+import React, { cloneElement } from 'react';
 import { useFlipContext } from '../Flip.context';
 
 export interface FlipTargetProps {
