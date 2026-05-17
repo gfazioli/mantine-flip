@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Badge,
   Button,
@@ -11,6 +10,7 @@ import {
   Text,
   Title,
 } from '@mantine/core';
+import React from 'react';
 import { Flip } from './Flip';
 
 export default {

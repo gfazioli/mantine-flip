@@ -1,6 +1,6 @@
-import React from 'react';
-import { Button } from '@mantine/core';
 import { render, screen, userEvent } from '@mantine-tests/core';
+import { Button } from '@mantine/core';
+import React from 'react';
 import { Flip } from './Flip';
 
 describe('Flip', () => {

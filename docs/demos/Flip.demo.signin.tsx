@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Flip } from '@gfazioli/mantine-flip';
 import {
   Anchor,
@@ -13,6 +12,7 @@ import {
   Title,
 } from '@mantine/core';
 import { MantineDemo } from '@mantinex/demo';
+import { useState } from 'react';
 import classes from './FlipDemoSignIn.module.css';
 
 const code = `

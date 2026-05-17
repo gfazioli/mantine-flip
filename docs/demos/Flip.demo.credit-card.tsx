@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { Flip } from '@gfazioli/mantine-flip';
 import {
   Container,
@@ -15,6 +14,7 @@ import {
 import { MonthPickerInput } from '@mantine/dates';
 import { useDisclosure, useHotkeys } from '@mantine/hooks';
 import { MantineDemo } from '@mantinex/demo';
+import { useEffect, useState } from 'react';
 
 const code = `
 import { useEffect, useState } from 'react';

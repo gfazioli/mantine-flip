@@ -1,5 +1,5 @@
-import React from 'react';
 import { useProps } from '@mantine/core';
+import React from 'react';
 
 export interface FlipBackProps {
   /** Back face content */
