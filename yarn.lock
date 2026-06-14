@@ -2314,12 +2314,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/hooks@npm:9.3.0":
-  version: 9.3.0
-  resolution: "@mantine/hooks@npm:9.3.0"
+"@mantine/hooks@npm:9.3.1":
+  version: 9.3.1
+  resolution: "@mantine/hooks@npm:9.3.1"
   peerDependencies:
     react: ^19.2.0
-  checksum: 10c0/ed95a2551b34719d43d7b195cf05248498f20add736a2e4ec582b677e5a9efb53b562010df79dc9af7db087e76e9ac42192443c9d03f76963b5dba7dfc2e0a63
+  checksum: 10c0/f89cfccd01fae5c9d691fa8391741e769c0ed6930ddffafd353884afa8057cfdbea4747bab7847950195019d1e79d8398033841ea02398c27b07e10e150ab6c8
   languageName: node
   linkType: hard
 
@@ -6681,7 +6681,7 @@ __metadata:
     "@mantine/code-highlight": "npm:9.3.0"
     "@mantine/core": "npm:9.3.0"
     "@mantine/dates": "npm:9.3.0"
-    "@mantine/hooks": "npm:9.3.0"
+    "@mantine/hooks": "npm:9.3.1"
     "@mantinex/demo": "npm:^2.0.0"
     "@mantinex/dev-icons": "npm:^2.0.0"
     "@mantinex/mantine-header": "npm:^2.0.0"
@@ -8999,7 +8999,7 @@ __metadata:
   dependencies:
     "@mantine-tests/core": "npm:^2.1.0"
     "@mantine/core": "npm:9.3.0"
-    "@mantine/hooks": "npm:9.3.0"
+    "@mantine/hooks": "npm:9.3.1"
     "@rollup/plugin-node-resolve": "npm:^16.0.3"
     "@rollup/plugin-replace": "npm:^6.0.3"
     "@storybook/addon-themes": "npm:^10.4.2"
