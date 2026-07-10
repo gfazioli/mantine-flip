@@ -99,8 +99,3 @@ Your help truly matters.
 ---
 
 https://github.com/user-attachments/assets/cc968450-9d8c-4b16-be58-a6766597742e
-
----
-  
-[![Star History Chart](https://api.star-history.com/svg?repos=gfazioli/mantine-flip&type=Timeline)](https://www.star-history.com/#gfazioli/mantine-flip&Timeline)
-
