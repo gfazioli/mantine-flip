@@ -1,6 +1,7 @@
 import '@mantine/core/styles.css';
 // Core
 import '@mantine/code-highlight/styles.css';
+import '@mantine/dates/styles.css';
 import '@mantinex/demo/styles.css';
 import '@mantinex/mantine-header/styles.css';
 import '@mantinex/mantine-logo/styles.css';
