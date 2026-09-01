@@ -1,9 +1,16 @@
-# Keep the SHA-pinned GitHub Actions current. The workflow `uses:` refs are
-# pinned to commit SHAs (with a trailing version comment) for supply-chain
-# safety; Dependabot opens a PR to bump the SHA + comment when a new release
-# of an action ships, so pinning doesn't freeze us on a stale, unpatched
-# action. Scoped to github-actions only — the npm dependency bumps of this
-# repo are driven by `scripts/update-repo.sh` in the workspace, not here.
+# Two ecosystems, for two different reasons.
+#
+# github-actions: the workflow `uses:` refs are pinned to commit SHAs (with a
+# trailing version comment) for supply-chain safety, so Dependabot is what
+# stops the pins going stale — it opens one grouped PR when a new release of
+# an action ships. The npm bumps of this repo are driven by
+# `scripts/update-repo.sh` in the workspace, not from here.
+#
+# npm, patch only: this repo has carried a patch-only npm config since
+# `c79b018`, deliberately ignoring major and minor so the workspace-wide
+# rollout scripts stay the single place minor bumps happen. Keep the ignore
+# list if you touch this — dropping it turns one weekly patch PR into a stream
+# of minor bumps that fight the rollout.
 version: 2
 updates:
   - package-ecosystem: "github-actions"
@@ -16,3 +23,13 @@ updates:
           - "*"
     commit-message:
       prefix: "ci"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - "version-update:semver-major"
+          - "version-update:semver-minor"
