@@ -17,6 +17,10 @@ import { MantineDemo } from '@mantinex/demo';
 import { useEffect, useState } from 'react';
 
 const code = `
+// MonthPickerInput lives in @mantine/dates, which ships its own stylesheet:
+// without this import the picker renders unstyled.
+import '@mantine/dates/styles.css';
+
 import { useEffect, useState } from 'react';
 import { Flip } from '@gfazioli/mantine-flip';
 import {
