@@ -12,9 +12,12 @@
     "extension",
     "flip",
     "mantine",
+    "mantine-ui",
+    "mantine-v9",
     "react",
     "react-component",
     "typescript",
+    "component",
     "widget"
   ],
   "main": "./dist/cjs/index.cjs",
