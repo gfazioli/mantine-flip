@@ -36,9 +36,12 @@ Flip.errors.ts            # Error definitions
 Flip.test.tsx             # Component tests
 Flip.story.tsx            # Storybook stories
 index.ts                  # Public exports
-FlipFront/FlipFront.tsx   # Flip.Front compound component (explicit front face)
-FlipBack/FlipBack.tsx     # Flip.Back compound component (explicit back face)
-FlipTarget/FlipTarget.tsx # Flip.Target subcomponent (click trigger)
+FlipFront/
+  FlipFront.tsx           # Flip.Front compound component (explicit front face)
+FlipBack/
+  FlipBack.tsx            # Flip.Back compound component (explicit back face)
+FlipTarget/
+  FlipTarget.tsx          # Flip.Target subcomponent (click trigger)
 ```
 
 Subcomponents are attached as static members: `Flip.Target`, `Flip.Front`, `Flip.Back`.
@@ -52,7 +55,7 @@ Rollup bundles to dual ESM (`dist/esm/`) and CJS (`dist/cjs/`) with `'use client
 Follows standard Mantine patterns: `useProps`, `useStyles`, `createVarsResolver`, `polymorphicFactory`. CSS variables: `--flip-perspective`, `--flip-transition-duration`, `--flip-transition-timing-function`.
 
 ### Two Children Modes
-Either exactly 2 raw children (backward compat) or `Flip.Front`/`Flip.Back` compound components. Mixing is not allowed.
+Either exactly 2 raw children (backward compat) or `Flip.Front`/`Flip.Back` compound components. Mixing is not allowed. `Flip.tsx` throws at render when either rule is broken: the guardrails are intentional.
 
 ### Controlled / Uncontrolled
 Supports both controlled (`flipped` prop) and uncontrolled (`defaultFlipped` prop) modes via `useUncontrolled`.
